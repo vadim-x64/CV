@@ -8,6 +8,10 @@ body {
   animation: fadeIn 2s ease forwards;
 }
 
+body:hover {
+  outline: none;
+}
+
 body.fade-in {
   display: block;
   opacity: 1;
@@ -21,7 +25,7 @@ body.fade-in {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: blur(100px);
+  filter: blur(150px);
 }
 
 header {
@@ -55,6 +59,7 @@ header {
   justify-content: space-around;
   align-items: center;
   margin: auto;
+  flex-wrap: wrap;
 }
 
 .container a {
@@ -109,8 +114,7 @@ header {
 }
 
 .text-block {
-  width: 366px;
-  height: 488px;
+  width: 350px;
   color: white;
 }
 
@@ -226,7 +230,8 @@ header {
   text-align: center;
 }
 
-.build {
+.build, 
+.build3 {
   display: flex;
   justify-content: space-around;
   align-items: stretch;
@@ -234,7 +239,8 @@ header {
 }
 
 .build1,
-.build2 {
+.build2, 
+.build3 {
   color: white;
   width: 600px;
   display: flex;
@@ -452,7 +458,7 @@ header {
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 10px;
+  right: 20px;
   border: none;
   background: none;
   cursor: pointer;
@@ -467,7 +473,7 @@ header {
 
 .back img {
   width: 70px;
-  filter: invert(100%);
+  filter: invert(90%);
 }
 
 @keyframes fadeIn {
@@ -477,5 +483,25 @@ header {
 
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #video-background {
+    filter: blur(10px);
+  }
+
+  .sec .title h1 {
+    font-size: 48px;
+  }
+
+  .container a {
+    font-size: 18px;
+    box-shadow: none;
+    margin: 15px 30px;
+  }
+
+  .container a:hover {
+    box-shadow: none;
   }
 }
