@@ -5,8 +5,9 @@ body {
   user-select: none;
   background-color: black;
   opacity: 0;
-  animation: fadeIn 2s ease forwards;
+  animation: fadeIn 3s ease forwards;
   overflow-x: hidden;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body:hover {
@@ -24,9 +25,8 @@ body.fade-in {
   left: 0;
   height: 10px;
   width: 0;
-  background: linear-gradient(to right, #6a00f4, #d900ff, #009fff);
+  background: linear-gradient(to right, #7155f0aa, #7e62f0aa, #8e6bf0aa, #b487f0aa, #d88ff0aa);
   z-index: 100;
-  border-radius: 15px;
 }
 
 #video-background {
@@ -43,7 +43,7 @@ body.fade-in {
 header {
   margin: 10px auto;
   background-color: transparent;
-  margin: 0;
+  margin: auto;
   padding: 20px;
 }
 
@@ -61,8 +61,7 @@ header {
 }
 
 .sec .title h1 {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 72px;
+  font-size: 90px;
   color: white;
 }
 
@@ -75,11 +74,11 @@ header {
 }
 
 .container a {
-  font-family: 'Courier New', monospace;
-  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 28px;
   background-color: transparent;
   border-radius: 5px;
-  padding: 5px 30px;
+  padding: 10px 30px;
   border: 2px solid transparent;
   text-decoration: none;
   color: white;
@@ -87,7 +86,6 @@ header {
   transition: box-shadow 0.5s ease;
   position: relative;
   outline: none;
-  
   margin: 20px;
   text-align: center;
   flex-wrap: wrap;
@@ -115,7 +113,7 @@ header {
   border-radius: 15px;
   box-shadow: -5px -5px 10px blue, 5px 5px 10px darkorchid;
   transition: box-shadow 0.5s ease;
-  width: 1000px;
+  width: 1100px;
 }
 
 .photo,
@@ -130,6 +128,7 @@ header {
   justify-content: center;
   align-items: center;
   perspective: 1000px;
+  cursor: pointer;
 }
 
 .profile-photo {
@@ -147,17 +146,17 @@ header {
   backface-visibility: hidden;
 }
 
-.icon img {
-  width: 70px;
-  filter: invert(100%);
+.photo .icon img {
+  width: 100px;
 }
 
 .photo img {
+  width: 450px;
   border-radius: 10px;
 }
 
 .text-block {
-  width: 350px;
+  width: 450px;
   color: white;
 }
 
@@ -166,30 +165,30 @@ header {
 }
 
 .text-block h1 {
-  font-family: 'Times New Roman', Times, serif;
+  font-size: 52px;
+  text-align: end;
 }
 
 .text-block p {
-  font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
   line-height: 1.5;
   text-align: justify;
 }
 
 .text-block h3 {
-  font-family: 'Courier New', monospace;
-  text-align: start;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: end;
+  font-size: 24px;
 }
 
 .sec1 h1 {
-  font-size: 72px;
-  font-family: 'Times New Roman', Times, serif;
+  font-size: 90px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 300px auto auto auto;
+  margin: 300px auto 50px auto;
 }
 
 .section {
@@ -200,17 +199,19 @@ header {
 }
 
 .line1 {
-  background-color: rgb(0, 0, 210);
-  width: 400px;
-  height: 5px;
+  background-color: rgb(0, 0, 255);
+  width: 500px;
+  height: 10px;
+  border-radius: 5px;
   margin: 20px;
   box-shadow: 0 0 10px 5px rgb(0, 0, 255);
 }
 
 .line2 {
-  background-color: rgb(210, 0, 210);
-  width: 400px;
-  height: 5px;
+  background-color: rgb(255, 0, 255);
+  width: 500px;
+  height: 10px;
+  border-radius: 5px;
   margin: 20px;
   box-shadow: 0 0 10px 5px rgb(255, 0, 255);
 }
@@ -231,6 +232,7 @@ header {
 
 .softs,
 .hards {
+  align-items: baseline;
   text-align: center;
   color: white;
   margin: auto;
@@ -245,30 +247,29 @@ header {
 
 .soft img:hover,
 .hard img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .softs table tr._s,
 .hards table tr._h {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 36px;
+  font-size: 48px;
   font-weight: bold;
-  background-color: rgba(70, 70, 70, 0.3);
+  background-color: rgba(70, 70, 70, 0.4);
 }
 
 .tables table,
 .tables table {
   width: 100%;
-  font-size: 24px;
+  font-size: 32px;
   border-collapse: collapse;
 }
 
 .tables td,
 .tables td {
-  font-family: 'Courier New', monospace;
-  border: 1px solid white;
+  font-family: 'Courier New', Courier, monospace;
+  border: 3px solid white;
   width: 300px;
-  padding: 10px 30px;
+  padding: 20px 70px;
   text-align: center;
 }
 
@@ -293,14 +294,14 @@ header {
     repeating-linear-gradient(to right,
       transparent,
       transparent 50px,
-      rgba(0, 0, 0, 0.1) 51px,
-      rgba(0, 0, 0, 0.1) 100px,
+      rgba(0, 0, 0, 0.3) 51px,
+      rgba(0, 0, 0, 0.3) 100px,
       transparent 101px),
     repeating-linear-gradient(to bottom,
       transparent,
       transparent 40px,
-      rgba(0, 0, 0, 0.1) 41px,
-      rgba(0, 0, 0, 0.1) 90px,
+      rgba(0, 0, 0, 0.3) 41px,
+      rgba(0, 0, 0, 0.3) 90px,
       transparent 91px);
   z-index: 0;
 }
@@ -309,11 +310,11 @@ header {
   display: flex;
   justify-content: center;
   z-index: 2;
-  gap: 170px;
+  gap: 175px;
 }
 
 .icons img {
-  width: 80px;
+  width: 75px;
   height: auto;
 }
 
@@ -334,8 +335,8 @@ header {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 15px;
-  padding: 10px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   transition: box-shadow 0.5s ease;
 }
 
@@ -364,17 +365,20 @@ header {
 }
 
 .caption h5 {
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 10px;
 }
 
 .caption p {
   font-size: 18px;
   margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 .caption span {
-  color: gainsboro;
+  font-size: 16px;
+  color: rgb(160, 160, 160);
 }
 
 .projects {

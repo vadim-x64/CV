@@ -5,7 +5,6 @@ window.onscroll = function () {
     document.getElementById("scroll-progress").style.width = scrollPercent + "%";
 };
 
-
 document.getElementById('iconContainer').addEventListener('click', function () {
     const photo = document.querySelector('.profile-photo');
     const icon = document.getElementById('iconContainer');
@@ -14,7 +13,7 @@ document.getElementById('iconContainer').addEventListener('click', function () {
         icon.style.transform = 'rotateY(0deg)';
     } else {
         photo.style.transform = 'rotateY(0deg)';
-        icon.style.transform = 'rotateY(180deg)';
+        icon.style.transform = 'rotateY(-180deg)';
     }
 });
 
