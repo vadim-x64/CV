@@ -66,12 +66,18 @@ document.querySelectorAll('.media-container').forEach((container) => {
     });
 });
 
+
 const stacks = document.querySelectorAll('.stack1, .stack2');
+const toggleButton = document.getElementById('toggleButton');
+
+let isCentered = false;
 
 const options = {
     root: null,
     threshold: 0
 };
+
+let isScrollingEnabled = true;
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -79,10 +85,13 @@ const observer = new IntersectionObserver((entries) => {
 
         if (entry.isIntersecting) {
             window.addEventListener('scroll', () => {
-                const scrollPosition = window.scrollY;
-                const speed = 0.5;
-                const direction = entry.target.classList.contains('stack1') ? -0.250 : 0.250;
-                icons.style.transform = `translateX(${scrollPosition * speed * direction}px)`;
+                if (isScrollingEnabled) {
+                    const scrollPosition = window.scrollY;
+                    const speed = 0.5;
+                    const direction = entry.target.classList.contains('stack1') ? -0.25 : 0.25;
+                    icons.style.transform = `translateX(${scrollPosition * speed * direction}px)`;
+                    
+                }
             });
         } else {
             icons.style.transform = 'translateX(0)';
@@ -92,4 +101,14 @@ const observer = new IntersectionObserver((entries) => {
 
 stacks.forEach(stack => {
     observer.observe(stack);
+});
+
+toggleButton.addEventListener('click', () => {
+    stacks.forEach(stack => {
+        const icons = stack.querySelector('.icons');
+        icons.classList.toggle('collapsed');
+        icons.style.transform = 'translateX(0)';
+    });
+
+    isScrollingEnabled = !isScrollingEnabled;
 });
