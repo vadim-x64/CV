@@ -3,7 +3,7 @@ body {
   padding: 0;
   height: 100%;
   user-select: none;
-  background-color: black;
+  background-color: #000;
   opacity: 0;
   animation: fadeIn 3s ease forwards;
   overflow-x: hidden;
@@ -62,15 +62,14 @@ header {
 
 .sec .title h1 {
   font-size: 90px;
-  color: white;
+  color: #fff;
 }
 
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin: auto;
-  flex-wrap: wrap;
 }
 
 .container a {
@@ -81,7 +80,7 @@ header {
   padding: 10px 30px;
   border: 2px solid transparent;
   text-decoration: none;
-  color: white;
+  color: #fff;
   box-shadow: 0 0 10px 0 darkorchid;
   transition: box-shadow 0.5s ease;
   position: relative;
@@ -89,7 +88,7 @@ header {
   margin: 20px;
   text-align: center;
   flex-wrap: wrap;
-  width: 300px;
+  width: 100%;
 }
 
 .container a:hover {
@@ -157,7 +156,7 @@ header {
 
 .text-block {
   width: 450px;
-  color: white;
+  color: #fff;
 }
 
 .main:hover {
@@ -183,7 +182,7 @@ header {
 
 .sec1 h1 {
   font-size: 90px;
-  color: white;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -216,8 +215,6 @@ header {
   box-shadow: 0 0 10px 5px rgb(255, 0, 255);
 }
 
-
-
 .tables {
   display: flex;
   justify-content: space-around;
@@ -237,7 +234,7 @@ header {
 
 .tables.softs,
 .tables.hards {
-  color: white;
+  color: #fff;
   margin: auto;
 }
 
@@ -258,16 +255,11 @@ header {
 .tables td,
 .tables td {
   font-family: 'Courier New', Courier, monospace;
-  border: 3px solid white;
+  border: 3px solid #fff;
   width: 300px;
   padding: 20px 70px;
   text-align: center;
 }
-
-
-
-
-
 
 .stack1,
 .stack2 {
@@ -283,7 +275,7 @@ header {
 .grid-bg {
   position: absolute;
   bottom: 30px;
-  width: 95%;
+  width: 90%;
   height: 20px;
   background: linear-gradient(35deg, #8800ff, #a914ff, #b13cff, #be68ff);
   box-shadow: 0 0 10px rgb(200, 0, 255);
@@ -332,8 +324,6 @@ header {
 #toggleButton:hover {
   box-shadow: 0 0 20px rgb(150, 0, 200);
 }
-
-
 
 .build, 
 .build3 {
@@ -398,30 +388,25 @@ header {
   color: rgb(160, 160, 160);
 }
 
-/*  */
-
 .projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 100px auto;
+  margin: auto;
 }
 
 .project1,
 .project2,
 .project3,
 .project4 {
-  color: white;
+  color: #fff;
   width: 700px;
   display: flex;
   justify-content: center;
   border-radius: 15px;
   padding: 20px;
   transition: box-shadow 0.5s ease;
-    
 }
-
-
 
 .projects video {
   width: 100%;
@@ -440,7 +425,32 @@ header {
   border-radius: 15px;
 }
 
+.project1 .media-container {
+  margin: 200px auto auto auto;
+}
 
+.project2 .media-container {
+  margin: 200px auto auto auto;
+}
+
+.project3 .media-container {
+  margin: 200px auto auto auto;
+}
+
+.project4 .media-container {
+  margin: 200px auto auto auto;
+}
+
+.media-title h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 32px;
+  font-weight: lighter;
+  color: #cacaca;
+  text-align: center;
+  position: absolute;
+  top: -80px;
+  left: 1%;
+}
 
 .project-info {
   text-align: center;
@@ -450,17 +460,19 @@ header {
 .media-title {
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: #fff;
 }
 
 .media-description {
-  font-size: 16px;
-  color: white;
-  max-width: 700px;
-  margin: 0 auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: 20px;
+  color: #e7e7e7;
+  width: 650px;
+  margin: auto 10px;
+  line-height: 1.5;
 }
-
-
 
 .thumbnail {
   position: relative;
@@ -470,7 +482,6 @@ header {
   backface-visibility: hidden;
   border-radius: 15px;
   transition: transform 1s ease-in-out;
-  
 }
 
 .video-content {
@@ -493,38 +504,12 @@ header {
   transform: rotateY(360deg);
 }
 
-
-
-
-
-
-
-
-
-/* .notice {
-  font-family: 'Segoe UI Light', sans-serif;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  color: #fff;
-  font-size: 48px;
-  font-style: oblique;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
-               0 0 20px rgba(255, 255, 255, 0.9),
-               0 0 30px rgba(255, 255, 255, 0.9);
-} */
-
-
-
-
-
-
 .footer {
   background-color: transparent;
-  color: white;
+  color: #fff;
   padding: 20px 0;
   position: relative;
-  margin: 100px auto auto auto;
+  margin: 300px auto auto auto;
 }
 
 .footer-content {
@@ -557,7 +542,7 @@ header {
 }
 
 .footer-section a:hover {
-  color: white;
+  color: #fff;
 }
 
 .footer-section ul {

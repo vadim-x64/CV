@@ -1,0 +1,10 @@
+<div id="experience" class="sec1">
+    <h1>EXPERIENCE</h1>
+</div>
+
+<div id="courses" class="sec1">
+    <h1>ACHIEVEMENTS</h1>
+</div>
+
+<a href="#experience" class="btn">EXPERIENCE</a>
+<a href="#courses" class="btn">ACHIEVEMENTS</a>

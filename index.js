@@ -69,7 +69,6 @@ document.querySelectorAll('.media-container').forEach((container) => {
 
 const stacks = document.querySelectorAll('.stack1, .stack2');
 const toggleButton = document.getElementById('toggleButton');
-
 let isCentered = false;
 
 const options = {
@@ -78,7 +77,6 @@ const options = {
 };
 
 let isScrollingEnabled = true;
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         const icons = entry.target.querySelector('.icons');
@@ -90,7 +88,6 @@ const observer = new IntersectionObserver((entries) => {
                     const speed = 0.5;
                     const direction = entry.target.classList.contains('stack1') ? -0.25 : 0.25;
                     icons.style.transform = `translateX(${scrollPosition * speed * direction}px)`;
-                    
                 }
             });
         } else {
@@ -109,6 +106,5 @@ toggleButton.addEventListener('click', () => {
         icons.classList.toggle('collapsed');
         icons.style.transform = 'translateX(0)';
     });
-
     isScrollingEnabled = !isScrollingEnabled;
 });
