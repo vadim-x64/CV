@@ -399,13 +399,32 @@ header {
 .project2,
 .project3,
 .project4 {
-  color: #fff;
+  color: #999;
   width: 700px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border-radius: 15px;
   padding: 20px;
   transition: box-shadow 0.5s ease;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: transparent;
+  text-align: left;
+  padding: 10px;
+}
+
+.project-title {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 28px;
+}
+
+.project-description {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.5;
 }
 
 .projects video {
@@ -425,55 +444,6 @@ header {
   border-radius: 15px;
 }
 
-.project1 .media-container {
-  margin: 200px auto auto auto;
-}
-
-.project2 .media-container {
-  margin: 200px auto auto auto;
-}
-
-.project3 .media-container {
-  margin: 200px auto auto auto;
-}
-
-.project4 .media-container {
-  margin: 200px auto auto auto;
-}
-
-.media-title h3 {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 32px;
-  font-weight: lighter;
-  color: #cacaca;
-  text-align: center;
-  position: absolute;
-  top: -80px;
-  left: 1%;
-}
-
-.project-info {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.media-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.media-description {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  font-size: 20px;
-  color: #e7e7e7;
-  width: 650px;
-  margin: auto 10px;
-  line-height: 1.5;
-}
-
 .thumbnail {
   position: relative;
   width: 150px;
@@ -486,8 +456,6 @@ header {
 
 .video-content {
   position: absolute;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   backface-visibility: hidden;
   border-radius: 15px;
@@ -504,12 +472,28 @@ header {
   transform: rotateY(360deg);
 }
 
+.halloween {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+}
+
+.halloween a img {
+  width: 1200px;
+  transition: transform 1s ease;
+}
+
+.halloween a img:hover {
+  transform: scale(1.05);
+}
+
 .footer {
   background-color: transparent;
   color: #fff;
   padding: 20px 0;
   position: relative;
-  margin: 300px auto auto auto;
+  margin: auto;
 }
 
 .footer-content {
