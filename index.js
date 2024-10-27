@@ -109,24 +109,24 @@ toggleButton.addEventListener('click', () => {
     isScrollingEnabled = !isScrollingEnabled;
 });
 
-const img = document.getElementById('halloween-img');
-const audio = document.getElementById('ghost-sound');
-let fadeOutInterval;
+// const img = document.getElementById('halloween-img');
+// const audio = document.getElementById('ghost-sound');
+// let fadeOutInterval;
 
-img.addEventListener('mouseenter', () => {
-    clearInterval(fadeOutInterval);
-    audio.volume = 1;
-    audio.play();
-});
+// img.addEventListener('mouseenter', () => {
+//     clearInterval(fadeOutInterval);
+//     audio.volume = 1;
+//     audio.play();
+// });
 
-img.addEventListener('mouseleave', () => {
-    fadeOutInterval = setInterval(() => {
-        if (audio.volume > 0.01) {
-            audio.volume -= 0.05;
-        } else {
-            clearInterval(fadeOutInterval);
-            audio.pause();
-            audio.currentTime = 0;
-        }
-    }, 100);
-});
+// img.addEventListener('mouseleave', () => {
+//     fadeOutInterval = setInterval(() => {
+//         if (audio.volume > 0.01) {
+//             audio.volume -= 0.05;
+//         } else {
+//             clearInterval(fadeOutInterval);
+//             audio.pause();
+//             audio.currentTime = 0;
+//         }
+//     }, 100);
+// });
