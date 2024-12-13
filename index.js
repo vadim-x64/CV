@@ -1,7 +1,7 @@
 window.onscroll = function () {
-    var scrollTop = document.documentElement.scrollTop;
-    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrollPercent = (scrollTop / scrollHeight) * 100;
+    let scrollTop = document.documentElement.scrollTop;
+    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollPercent = (scrollTop / scrollHeight) * 100;
     document.getElementById("scroll-progress").style.width = scrollPercent + "%";
 };
 
@@ -25,7 +25,7 @@ document.querySelector('.profile-photo').addEventListener('click', function () {
 });
 
 document.addEventListener('scroll', function () {
-    var backButton = document.getElementById('backButton');
+    let backButton = document.getElementById('backButton');
     if (window.scrollY > 200) {
         backButton.classList.add('show');
     } else {
@@ -66,67 +66,54 @@ document.querySelectorAll('.media-container').forEach((container) => {
     });
 });
 
+const icons = document.querySelectorAll('.circle img');
+const totalIcons = icons.length;
+const radius = 300;
 
-const stacks = document.querySelectorAll('.stack1, .stack2');
-const toggleButton = document.getElementById('toggleButton');
-let isCentered = false;
+function setInitialPositions() {
+    icons.forEach((icon, index) => {
+        const angle = (index * 360) / totalIcons;
+        const radian = (angle * Math.PI) / 180;
+        const x = radius * Math.cos(radian);
+        const y = radius * Math.sin(radian);
+        icon.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+    });
+}
 
-const options = {
-    root: null,
-    threshold: 0
-};
+function rotateIcons(scrollPosition) {
+    icons.forEach((icon, index) => {
+        const angle = (scrollPosition / 5 + index * (360 / totalIcons)) % 360;
+        const radian = (angle * Math.PI) / 180;
+        const x = radius * Math.cos(radian);
+        const y = radius * Math.sin(radian);
+        icon.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+    });
+}
 
-let isScrollingEnabled = true;
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        const icons = entry.target.querySelector('.icons');
+setInitialPositions();
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    rotateIcons(scrollPosition);
+});
 
-        if (entry.isIntersecting) {
-            window.addEventListener('scroll', () => {
-                if (isScrollingEnabled) {
-                    const scrollPosition = window.scrollY;
-                    const speed = 0.5;
-                    const direction = entry.target.classList.contains('stack1') ? -0.25 : 0.25;
-                    icons.style.transform = `translateX(${scrollPosition * speed * direction}px)`;
-                }
-            });
+function throttle(func, limit) {
+    let lastFunc;
+    let lastRan;
+    return function() {
+        const context = this;
+        const args = arguments;
+
+        if (!lastRan) {
+            func.apply(context, args);
+            lastRan = Date.now();
         } else {
-            icons.style.transform = 'translateX(0)';
+            clearTimeout(lastFunc);
+            lastFunc = setTimeout(function() {
+                if (Date.now() - lastRan >= limit) {
+                    func.apply(context, args);
+                    lastRan = Date.now();
+                }
+            }, limit - (Date.now() - lastRan));
         }
-    });
-});
-
-stacks.forEach(stack => {
-    observer.observe(stack);
-});
-
-toggleButton.addEventListener('click', () => {
-    stacks.forEach(stack => {
-        const icons = stack.querySelector('.icons');
-        icons.classList.toggle('collapsed');
-        icons.style.transform = 'translateX(0)';
-    });
-    isScrollingEnabled = !isScrollingEnabled;
-});
-
-// const img = document.getElementById('halloween-img');
-// const audio = document.getElementById('ghost-sound');
-// let fadeOutInterval;
-
-// img.addEventListener('mouseenter', () => {
-//     clearInterval(fadeOutInterval);
-//     audio.volume = 1;
-//     audio.play();
-// });
-
-// img.addEventListener('mouseleave', () => {
-//     fadeOutInterval = setInterval(() => {
-//         if (audio.volume > 0.01) {
-//             audio.volume -= 0.05;
-//         } else {
-//             clearInterval(fadeOutInterval);
-//             audio.pause();
-//             audio.currentTime = 0;
-//         }
-//     }, 100);
-// });
+    };
+}
