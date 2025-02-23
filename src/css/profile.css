@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    background-image: linear-gradient(to bottom, #EAEFF8, #E1E8FA, #E1E8FA, #D4DFFA);
+    background-size: cover;
+    background-repeat: no-repeat;
+    user-select: none;
+    font-family: "Jura", serif;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #EAEFF8;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 5px solid #FFF;
+}
+
+.name {
+    padding: 35px 70px;
+    border-right: 5px solid #FFF;
+}
+
+.name a {
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.header-panel {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-200%);
+    width: 200px;
+    height: 40px;
+    background-color: #333;
+    transition: transform 0.3s ease;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    z-index: 999;
+}
+
+.panel-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.panel-half {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.panel-half:hover {
+    background-color: #777;
+}
+
+.switch-label {
+    font-size: 20px;
+    color: #FFF;
+    cursor: pointer;
+    width: 35px;
+    text-align: center;
+}
+
+header:hover .header-panel {
+    transform: translateX(-50%) translateY(-100%);
+}
+
+.nav-buttons {
+    margin-right: 30px;
+}
+
+.nav-buttons a.current {
+    color: #777;
+}
+
+.nav-buttons a.current:hover {
+    transform: none;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: lighter;
+    padding: 35px 20px;
+    color: #000;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.nav-buttons a:hover {
+    text-decoration: none;
+    transform: translateY(-5px);
+}
+
+main {
+    border-bottom: 5px solid #FFF;
+    border-right: 5px solid #FFF;
+    border-left: 5px solid #FFF;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 100px auto;
+}
+
+.about-me, .skills, .skills-container, .education, .experience, .education-grid, .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.about-me h2, .skills h2, .education h2, .experience h2 {
+    margin: 100px 0 20px 0;
+    grid-column: span 2;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.about-me p, .hard-skills, .soft-skills {
+    border-top: 1px solid black;
+    padding-top: 20px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #000;
+    margin: 0;
+}
+
+.about-me p a {
+    text-decoration: none;
+    color: #24249A;
+}
+
+.skills-container {
+    grid-column: span 2;
+}
+
+.skill {
+    margin: 0 0 30px 0;
+}
+
+.skill p, .progress-bar {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 15px;
+    background-color: #CCC;
+    border-radius: 10px;
+}
+
+.fill {
+    height: 100%;
+    background-color: #24249A;
+    border-radius: 10px;
+}
+
+.soft-skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.soft-skills li {
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.edu-item, .exp-item {
+    border-top: 1px solid black;
+    padding-top: 20px;
+    text-align: justify;
+    margin: 0;
+}
+
+.edu-item .title, .exp-item .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.edu-item .period, .exp-item .period {
+    font-size: 16px;
+    font-weight: lighter;
+    color: #777;
+    margin: 5px auto;
+}
+
+.edu-item .txt, .exp-item .txt {
+    font-size: 18px;
+    font-weight: lighter;
+    margin: 30px auto;
+}
+
+.education-grid, .experience-grid {
+    grid-column: span 2;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    width: 100%;
+    height: 70px;
+    font-size: 18px;
+    font-weight: normal;
+}
