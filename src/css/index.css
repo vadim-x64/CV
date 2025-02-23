@@ -119,6 +119,16 @@ header:hover .header-panel {
     transform: translateY(-5px);
 }
 
+main {
+    margin: 100px 0 0 0;
+}
+
+img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+
 .content {
     display: flex;
     align-items: center;
@@ -163,6 +173,8 @@ header:hover .header-panel {
 .about-me p {
     font-size: 20px;
     color: #333;
+    padding: 20px;
+    text-align: justify;
 }
 
 .container-label {
@@ -410,4 +422,135 @@ header:hover .header-panel {
     height: 70px;
     font-size: 18px;
     font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 20px;
+    }
+
+    .name {
+        padding: 10px 5px;
+        margin-bottom: 10px;
+    }
+
+    .name a {
+        font-size: 24px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .nav-buttons a {
+        padding: 10px 0;
+        margin-bottom: 5px;
+        font-size: 18px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-buttons a:hover {
+        transform: none;
+    }
+
+    .header-panel {
+        display: none;
+    }
+
+    main {
+        margin: 200px 0 0 0;
+    }
+
+    .content, .new-section, .photo-section {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+
+    .about-me {
+        padding-bottom: 10px;
+    }
+
+    .left-photo,
+    .about-me,
+    .right-photo,
+    .left-image-container,
+    .slider-container,
+    .right-image-container,
+    .photo-container-left,
+    .photo-container-right {
+        width: auto;
+        height: auto;
+    }
+
+    .about-me, .right-photo {
+        text-align: center;
+        border-top: none;
+        border-left: 5px solid #FFF;
+    }
+
+    .left-image-container, .photo-container-left, .photo-container-right {
+        border-top: none;
+    }
+
+    .right-image-container, .photo-container-right {
+        border-left: 5px solid #FFF;
+    }
+
+    .slider-container {
+        border-top: none;
+        border-left: 5px solid #FFF;
+        height: 300px;
+    }
+
+    .slide h2 {
+        font-size: 28px;
+    }
+
+    .nav-button {
+        font-size: 40px;
+    }
+
+    .container-label {
+        bottom: 15px;
+        font-size: 14px;
+    }
+
+    .contact-columns {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .contact-item {
+        font-size: 16px;
+        gap: 40px;
+        user-select: none;
+    }
+
+    .contact-item svg {
+        width: 20px;
+        height: 20px;
+        fill: #FFF;
+    }
+
+    .contact-overlay {
+        left: -30px;
+    }
+
+    .left-button a, .right-button a {
+        font-size: 24px;
+    }
+
+    .left-button a:hover, .right-button a:hover {
+        transform: none;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
 }
