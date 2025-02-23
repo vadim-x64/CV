@@ -237,3 +237,76 @@ main {
     font-size: 18px;
     font-weight: normal;
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 20px;
+    }
+
+    .name {
+        padding: 10px 5px;
+        margin-bottom: 10px;
+    }
+
+    .name a {
+        font-size: 24px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .nav-buttons a {
+        padding: 10px 0;
+        margin-bottom: 5px;
+        font-size: 18px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-buttons a:hover {
+        transform: none;
+    }
+
+    .header-panel {
+        display: none;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .container {
+        margin: 200px 0 0 0;
+    }
+
+    .about-me h2, .skills h2, .education h2, .experience h2 {
+        font-size: 28px;
+        grid-column: span 1;
+    }
+
+    .about-me, .skills, .skills-container, .education, .experience, .education-grid, .experience-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .skill p {
+        font-size: 18px;
+    }
+
+    .about-me > p:not(:first-of-type),
+    .skills-container > div:not(:first-child),
+    .edu-item:not(:first-child),
+    .exp-item:not(:first-child),
+    .hard-skills .skill:not(:first-child),
+    .soft-skills li:not(:first-child) {
+        border-top: none;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
