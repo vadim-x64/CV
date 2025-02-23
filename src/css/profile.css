@@ -171,6 +171,25 @@ main {
     font-size: 24px;
 }
 
+.languages {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.language-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flag-icon {
+    width: 30px;
+    height: auto;
+}
+
 .progress-bar {
     width: 100%;
     height: 15px;
@@ -201,6 +220,10 @@ main {
     padding-top: 20px;
     text-align: justify;
     margin: 0;
+}
+
+.edu-item:not(:first-child), .exp-item:not(:first-child) {
+    border-top: none;
 }
 
 .edu-item .title, .exp-item .title {
@@ -295,6 +318,16 @@ main {
 
     .skill p {
         font-size: 18px;
+    }
+
+    .soft-skills {
+        margin: 50px 0 100px 0;
+    }
+
+    .languages {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 
     .about-me > p:not(:first-of-type),

@@ -189,6 +189,7 @@ img {
     font-style: italic;
     font-weight: normal;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    text-transform: uppercase;
 }
 
 .about-me, .right-photo, .left-image-container, .photo-container-right {
@@ -498,6 +499,10 @@ img {
         border-top: none;
     }
 
+    .photo-container-left img {
+        filter: blur(5px);
+    }
+
     .right-image-container, .photo-container-right {
         border-left: 5px solid #FFF;
     }
@@ -521,6 +526,11 @@ img {
         font-size: 14px;
     }
 
+    .contact-overlay {
+        bottom: 55px;
+        left: -30px;
+    }
+
     .contact-columns {
         flex-direction: column;
         gap: 50px;
@@ -528,18 +538,7 @@ img {
 
     .contact-item {
         font-size: 16px;
-        gap: 40px;
         user-select: none;
-    }
-
-    .contact-item svg {
-        width: 20px;
-        height: 20px;
-        fill: #FFF;
-    }
-
-    .contact-overlay {
-        left: -30px;
     }
 
     .left-button a, .right-button a {
