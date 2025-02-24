@@ -129,7 +129,7 @@ img {
 .about-me p {
     font-size: 20px;
     color: #333;
-    padding: 20px;
+    padding: 30px;
     text-align: justify;
 }
 
@@ -381,6 +381,87 @@ img {
     font-weight: normal;
 }
 
+/* ЗМІНА ТЕМИ СТОРІНКИ */
+.theme-toggle {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+
+.icon-container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.theme-icon {
+    position: absolute;
+    bottom: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    color: #333;
+}
+
+.moon-icon {
+    transform: rotate(180deg);
+    opacity: 0;
+}
+
+body.dark-theme .sun-icon {
+    transform: rotate(-180deg);
+    opacity: 0;
+}
+
+body.dark-theme .moon-icon {
+    transform: rotate(0);
+    opacity: 1;
+}
+
+body.dark-theme {
+    background-image: linear-gradient(135deg, #585D67, #28292A, #28292A);
+}
+
+body.dark-theme header,
+body.dark-theme .name,
+body.dark-theme .left-photo,
+body.dark-theme .about-me,
+body.dark-theme .right-photo,
+body.dark-theme .left-image-container,
+body.dark-theme .slider-container,
+body.dark-theme .right-image-container,
+body.dark-theme .photo-container-left,
+body.dark-theme .photo-container-right,
+body.dark-theme .left-button,
+body.dark-theme .right-button {
+    border-color: #222;
+}
+
+body.dark-theme header {
+    background: #28292A;
+}
+
+body.dark-theme .name a,
+body.dark-theme .nav-buttons a,
+body.dark-theme .about-me h2,
+body.dark-theme .about-me p,
+body.dark-theme .slide h2,
+body.dark-theme .left-button a,
+body.dark-theme .right-button a,
+body.dark-theme .footer {
+    color: #FFF;
+}
+
+body.dark-theme .nav-buttons a.current {
+    color: #777;
+}
+
+body.dark-theme .nav-button {
+    color: #666;
+}
+
+body.dark-theme .theme-icon {
+    color: #FFF;
+}
+
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
@@ -447,7 +528,7 @@ img {
         border-left: 5px solid #FFF;
     }
 
-    .right-photo, .left-image-container, .photo-container-left, .photo-container-right {
+    .left-image-container, .photo-container-left, .photo-container-right {
         border-top: none;
     }
 
