@@ -18,21 +18,6 @@ nextButton.addEventListener('click', () => {
     showSlide(currentSlide);
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const leftHalf = document.querySelector('.panel-half.left');
-    const rightHalf = document.querySelector('.panel-half.right');
-    const languageLabel = document.querySelector('.language');
-    const themeLabel = document.querySelector('.theme');
-    leftHalf.addEventListener('click', () => {
-        leftHalf.classList.toggle('active');
-        languageLabel.textContent = languageLabel.textContent === 'EN' ? 'UA' : 'EN';
-    });
-    rightHalf.addEventListener('click', () => {
-        rightHalf.classList.toggle('active');
-        themeLabel.textContent = themeLabel.textContent === 'OFF' ? 'ON' : 'OFF';
-    });
-});
-
 let lastScroll = 0;
 const header = document.querySelector('header');
 
