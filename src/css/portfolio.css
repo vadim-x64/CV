@@ -88,7 +88,8 @@ main {
 }
 
 .projects h2 {
-    margin: 200px 0 40px 0;
+    margin: 100px 0 40px 0;
+    padding-top: 100px;
     font-size: 32px;
     font-weight: normal;
 }
@@ -141,6 +142,86 @@ main {
     height: 70px;
     font-size: 18px;
     font-weight: normal;
+}
+
+.theme-toggle {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+
+.icon-container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.theme-icon {
+    position: absolute;
+    bottom: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    color: #333;
+}
+
+.moon-icon {
+    transform: rotate(180deg);
+    opacity: 0;
+}
+
+body.dark-theme .sun-icon {
+    transform: rotate(-180deg);
+    opacity: 0;
+}
+
+body.dark-theme .moon-icon {
+    transform: rotate(0);
+    opacity: 1;
+}
+
+body.dark-theme {
+    background-image: linear-gradient(135deg, #575B66, #505359, #484A4D);
+}
+
+body.dark-theme header {
+    background: #28292A;
+}
+
+body.dark-theme header,
+body.dark-theme .name,
+body.dark-theme main,
+body.dark-theme .container,
+body.dark-theme .projects,
+body.dark-theme .project-card {
+    border-color: #222;
+}
+
+body.dark-theme .name a,
+body.dark-theme .nav-buttons a,
+body.dark-theme .projects h2,
+body.dark-theme .project-content h3,
+body.dark-theme .project-content p,
+body.dark-theme .footer-text {
+    color: #FFF;
+}
+
+body.dark-theme .nav-buttons a.current {
+    color: #777;
+}
+
+body.dark-theme .project-info {
+    color: #AAA;
+}
+
+body.dark-theme .theme-icon {
+    color: #FFF;
+}
+
+body.dark-theme {
+    background-image: linear-gradient(135deg, #575B66, #505359, #484A4D);
+}
+
+body.dark-theme .project-card:nth-child(-n+2) {
+    border-top-color: #FFF;
 }
 
 @media screen and (max-width: 768px) {

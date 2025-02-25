@@ -381,7 +381,6 @@ img {
     font-weight: normal;
 }
 
-/* ЗМІНА ТЕМИ СТОРІНКИ */
 .theme-toggle {
     position: absolute;
     right: 30px;
@@ -417,7 +416,11 @@ body.dark-theme .moon-icon {
 }
 
 body.dark-theme {
-    background-image: linear-gradient(135deg, #585D67, #28292A, #28292A);
+    background-image: linear-gradient(135deg, #575B66, #505359, #484A4D);
+}
+
+body.dark-theme header {
+    background: #28292A;
 }
 
 body.dark-theme header,
@@ -433,10 +436,6 @@ body.dark-theme .photo-container-right,
 body.dark-theme .left-button,
 body.dark-theme .right-button {
     border-color: #222;
-}
-
-body.dark-theme header {
-    background: #28292A;
 }
 
 body.dark-theme .name a,

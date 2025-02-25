@@ -31,3 +31,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 500);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+    }
+
+    const themeToggle = document.querySelector('.theme-toggle');
+    themeToggle.addEventListener('click', function() {
+        if (document.body.classList.contains('dark-theme')) {
+            document.body.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+});

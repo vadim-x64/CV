@@ -38,7 +38,6 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// ЗМІНА ТЕМИ СТОРІНКИ
 document.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
@@ -56,4 +55,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-//
