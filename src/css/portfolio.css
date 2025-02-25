@@ -144,6 +144,25 @@ main {
     font-weight: normal;
 }
 
+.language-toggle {
+    position: absolute;
+    right: 75px;
+    cursor: pointer;
+}
+
+.language-icon {
+    position: absolute;
+    bottom: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.language-icon a {
+    text-decoration: none;
+    color: #333;
+    font-size: 21px;
+    font-weight: bold;
+}
+
 .theme-toggle {
     position: absolute;
     right: 30px;
@@ -212,12 +231,13 @@ body.dark-theme .project-info {
     color: #AAA;
 }
 
-body.dark-theme .theme-icon {
+body.dark-theme .theme-icon,
+body.dark-theme .language-icon a {
     color: #FFF;
 }
 
 body.dark-theme {
-    background-image: linear-gradient(135deg, #575B66, #505359, #484A4D);
+    background-image: linear-gradient(135deg, #4C4F59, #393C40, #303133);
 }
 
 body.dark-theme .project-card:nth-child(-n+2) {
@@ -277,5 +297,10 @@ body.dark-theme .project-card:nth-child(-n+2) {
 
     .footer {
         font-size: 14px;
+    }
+
+    .icon-container {
+        width: 25px;
+        height: 25px;
     }
 }
