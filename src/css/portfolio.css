@@ -127,11 +127,6 @@ main {
     text-align: justify;
 }
 
-.project-info {
-    font-size: 16px;
-    color: #777;
-}
-
 .footer {
     display: flex;
     justify-content: center;
@@ -227,10 +222,6 @@ body.dark-theme .nav-buttons a.current {
     color: #777;
 }
 
-body.dark-theme .project-info {
-    color: #AAA;
-}
-
 body.dark-theme .theme-icon,
 body.dark-theme .language-icon a {
     color: #FFF;
@@ -245,6 +236,10 @@ body.dark-theme .project-card:nth-child(-n+2) {
 }
 
 @media screen and (max-width: 768px) {
+    body.dark-theme .name {
+        border-right-color: #FFF;
+    }
+
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -259,6 +254,7 @@ body.dark-theme .project-card:nth-child(-n+2) {
 
     .name a {
         font-size: 24px;
+        margin-right: 10px;
     }
 
     .nav-buttons {
@@ -296,7 +292,7 @@ body.dark-theme .project-card:nth-child(-n+2) {
     }
 
     .footer {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .icon-container {

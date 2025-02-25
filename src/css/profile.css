@@ -338,6 +338,10 @@ body.dark-theme .exp-item .period {
 }
 
 @media screen and (max-width: 768px) {
+    body.dark-theme .name {
+        border-right-color: #FFF;
+    }
+
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -352,6 +356,7 @@ body.dark-theme .exp-item .period {
 
     .name a {
         font-size: 24px;
+        margin-right: 10px;
     }
 
     .nav-buttons {
@@ -389,7 +394,7 @@ body.dark-theme .exp-item .period {
     }
 
     .skill p {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .soft-skills {
@@ -412,7 +417,7 @@ body.dark-theme .exp-item .period {
     }
 
     .footer {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .icon-container {
