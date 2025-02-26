@@ -81,6 +81,70 @@ main {
     border-left: 5px solid #FFF;
 }
 
+.git {
+    position: absolute;
+    top: 200px;
+    right: 60px;
+    background: #222;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    animation: bounce 1.2s infinite alternate;
+}
+
+.git:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    animation: emitRings 2s infinite;
+}
+
+.git:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    animation: emitRings 2s infinite 1s;
+}
+
+.git img {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes emitRings {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
 .container {
     max-width: 1080px;
     margin: auto;
@@ -235,6 +299,14 @@ body.dark-theme .project-card:nth-child(-n+2) {
     border-top-color: #FFF;
 }
 
+body.dark-theme .git:before {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+body.dark-theme .git:after {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
 @media screen and (max-width: 768px) {
     body.dark-theme .name {
         border-right-color: #FFF;
@@ -298,5 +370,17 @@ body.dark-theme .project-card:nth-child(-n+2) {
     .icon-container {
         width: 25px;
         height: 25px;
+    }
+
+    .git {
+        top: 300px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .git img {
+        width: 50px;
+        height: 50px;
     }
 }
