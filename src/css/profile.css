@@ -1,3 +1,7 @@
+* {
+    font-family: "Jura", serif;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +10,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     user-select: none;
-    font-family: "Jura", serif;
     opacity: 0;
     animation: fadeIn 1s ease-out 0.1s forwards;
 }
@@ -112,6 +115,95 @@ main {
 .about-me p a {
     text-decoration: none;
     color: #24249A;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #EAEFF8;
+    margin: 15% auto;
+    padding: 20px;
+    border: 5px solid #FFF;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+.close-button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #777;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.language-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.language-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.language-option .flag-icon {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.language-option span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.download-btn {
+    background: none;
+    border: none;
+    color: #24249A;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .download-btn {
+    color: #4A4AFF;
+    font-weight: bold;
 }
 
 .skills-container {
@@ -335,6 +427,16 @@ body.dark-theme .language-icon a {
 body.dark-theme .edu-item .period,
 body.dark-theme .exp-item .period {
     color: grey;
+}
+
+body.dark-theme .modal-content {
+    background-color: #28292A;
+    border-color: #222;
+    color: #FFF;
+}
+
+body.dark-theme .language-option {
+    color: #FFF;
 }
 
 @media screen and (min-width: 1081px) and (max-width: 1200px) {
