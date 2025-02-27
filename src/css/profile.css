@@ -337,6 +337,42 @@ body.dark-theme .exp-item .period {
     color: grey;
 }
 
+@media screen and (min-width: 1081px) and (max-width: 1200px) {
+    .nav-buttons a:hover {
+        transform: none;
+    }
+
+    .container {
+        max-width: 1020px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+    body.dark-theme .name {
+        border-right-color: #FFF;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .nav-buttons a {
+        padding: 10px 0;
+        margin-bottom: 5px;
+        width: 100%;
+        text-align: right;
+    }
+
+    .nav-buttons a:hover {
+        transform: none;
+    }
+
+    .container {
+        margin: 150px 20px 100px 20px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     body.dark-theme .name {
         border-right-color: #FFF;
