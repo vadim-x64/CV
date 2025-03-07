@@ -573,7 +573,7 @@ body.dark-theme .language-icon a {
     .nav-buttons a {
         padding: 10px 0;
         margin-bottom: 5px;
-        font-size: 18px;
+        font-size: 20px;
         width: 100%;
         text-align: left;
     }
@@ -647,6 +647,7 @@ body.dark-theme .language-icon a {
 
     .container-label {
         bottom: 20px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
     }
 
     .contact-columns, .contact-column {

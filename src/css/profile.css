@@ -117,7 +117,6 @@ main {
     color: #24249A;
 }
 
-
 .modal {
     display: none;
     position: fixed;
@@ -139,15 +138,19 @@ main {
 .modal-content {
     position: relative;
     background-color: #EAEFF8;
-    margin: 15% auto;
+    margin: 250px auto;
     padding: 20px;
     border: 5px solid #FFF;
-    width: 80%;
+    width: 100%;
     max-width: 400px;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(-20px);
     transition: transform 0.3s ease;
+}
+
+.modal-content h3 {
+    font-size: 20px;
 }
 
 .modal.show .modal-content {
@@ -157,9 +160,9 @@ main {
 .close-button {
     position: absolute;
     right: 10px;
-    top: 5px;
+    top: 0;
     color: #777;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -177,17 +180,16 @@ main {
     text-decoration: none;
     color: #000;
     padding: 10px;
-    border-radius: 5px;
 }
 
 .language-option .flag-icon {
-    width: 40px;
+    width: 50px;
     height: auto;
     margin-bottom: 10px;
 }
 
 .language-option span {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -505,7 +507,7 @@ body.dark-theme .language-option {
     .nav-buttons a {
         padding: 10px 0;
         margin-bottom: 5px;
-        font-size: 18px;
+        font-size: 20px;
         width: 100%;
         text-align: left;
     }
