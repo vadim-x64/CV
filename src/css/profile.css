@@ -475,6 +475,26 @@ body.dark-theme .language-option {
     .container {
         margin: 150px 20px 100px 20px;
     }
+
+    .modal-content {
+        margin: 100px auto;
+    }
+
+    .modal-content h3 {
+        font-size: 18px;
+    }
+
+    .close-button {
+        font-size: 32px;
+    }
+
+    .language-option .flag-icon {
+        width: 40px;
+    }
+
+    .language-option span {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -563,5 +583,26 @@ body.dark-theme .language-option {
     .icon-container {
         width: 25px;
         height: 25px;
+    }
+
+    .modal-content {
+        margin: 300px auto;
+        width: 80%;
+    }
+
+    .modal-content h3 {
+        font-size: 18px;
+    }
+
+    .close-button {
+        font-size: 32px;
+    }
+
+    .language-option .flag-icon {
+        width: 40px;
+    }
+
+    .language-option span {
+        font-size: 14px;
     }
 }
