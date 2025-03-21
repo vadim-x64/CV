@@ -35,3 +35,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let visitCount = localStorage.getItem("visitCount");
+
+    if (!visitCount) {
+        visitCount = 1;
+    } else {
+        visitCount = parseInt(visitCount) + 1;
+    }
+
+    localStorage.setItem("visitCount", visitCount);
+
+    const footer = document.querySelector(".footer");
+    if (footer) {
+        const visitDisplay = document.createElement("p");
+        visitDisplay.className = "visit-counter";
+        visitDisplay.textContent = `${visitCount}`;
+        footer.appendChild(visitDisplay);
+    }
+});

@@ -373,6 +373,7 @@ img {
 }
 
 .footer {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -482,6 +483,16 @@ body.dark-theme .nav-button {
 body.dark-theme .theme-icon,
 body.dark-theme .language-icon a {
     color: #FFF;
+}
+
+.visit-counter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #000;
+    font-size: 12px;
+    padding: 0;
+    margin: 5px;
 }
 
 @media screen and (min-width: 1081px) and (max-width: 1200px) {
