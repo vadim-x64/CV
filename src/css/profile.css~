@@ -442,6 +442,16 @@ body.dark-theme .language-option {
     color: #FFF;
 }
 
+.visit-counter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #000;
+    font-size: 12px;
+    padding: 0;
+    margin: 5px;
+}
+
 @media screen and (min-width: 1081px) and (max-width: 1200px) {
     .nav-buttons a:hover {
         transform: none;

@@ -55,3 +55,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+const leftPhoto = document.querySelector('.left-photo');
+const icon = document.querySelector('.icon');
+const mainPhoto = document.querySelector('.main-photo');
+
+leftPhoto.addEventListener('click', () => {
+    icon.classList.toggle('hidden');
+    mainPhoto.classList.toggle('visible');
+});
+
+// добавлення білої тені до фото
+mainPhoto.addEventListener('transitionend', () => {
+    if (mainPhoto.classList.contains('visible')) {
+        mainPhoto.style.filter = 'grayscale(100%)';
+    } else {
+        mainPhoto.style.filter = '';
+    }
+});
