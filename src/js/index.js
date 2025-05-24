@@ -55,3 +55,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const leftPhoto = document.querySelector('.left-photo');
+    const leftPhotoImg = document.querySelector('.left-photo img');
+
+    leftPhoto.addEventListener('click', function() {
+        leftPhotoImg.classList.toggle('revealed');
+    });
+});
