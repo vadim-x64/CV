@@ -75,7 +75,7 @@ header {
 
 .nav-buttons a:hover {
     text-decoration: none;
-    transform: translateY(-5px);
+    transform: scaleX(1.1);
 }
 
 main {

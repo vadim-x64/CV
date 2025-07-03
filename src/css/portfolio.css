@@ -75,7 +75,7 @@ header {
 
 .nav-buttons a:hover {
     text-decoration: none;
-    transform: translateY(-5px);
+    transform: scaleX(1.1);
 }
 
 main {
@@ -178,11 +178,13 @@ main {
 
 .project-card img {
     width: 100%;
-    height: auto;
+    height: 300px;
     margin-bottom: 20px;
     pointer-events: none;
     -webkit-user-drag: none;
     -webkit-touch-callout: none;
+    object-fit: cover;
+    object-position: top;
 }
 
 .project-content h3 {
@@ -323,6 +325,10 @@ body.dark-theme .git:after {
     .container {
         max-width: 1020px;
     }
+
+    .project-card img {
+        object-position: top left;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1080px) {
@@ -352,6 +358,10 @@ body.dark-theme .git:after {
 
     .git {
         top: 230px;
+    }
+
+    .project-card img {
+        object-position: top left;
     }
 }
 
@@ -409,6 +419,10 @@ body.dark-theme .git:after {
 
     .project-card:not(:first-child) {
         border-top: none;
+    }
+
+    .project-card img {
+        object-position: top left;
     }
 
     .footer {
