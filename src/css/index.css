@@ -9,9 +9,8 @@ body {
     background-image: linear-gradient(to bottom, #EAEFF8, #E1E8FA, #E1E8FA, #D4DFFA);
     background-size: cover;
     background-repeat: no-repeat;
-    user-select: none;
     opacity: 0;
-    animation: fadeIn 1s ease-out 0.1s forwards;
+    animation: fadeIn 1s ease-out 0.5s forwards;
 }
 
 @keyframes fadeIn {
@@ -316,7 +315,6 @@ img {
     gap: 15px;
     color: #FFF;
     font-size: 20px;
-    user-select: text;
 }
 
 .contact-item svg {
@@ -400,7 +398,7 @@ img {
 .language-icon a {
     text-decoration: none;
     color: #333;
-    font-size: 21px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -596,16 +594,23 @@ body.dark-theme .language-icon a {
     .about-me {
         height: auto;
         width: auto;
-        border: none;
+        border-left: 5px solid #FFF;
+        border-right: 5px solid #FFF;
+        border-top: none;
+        border-bottom: none;
     }
 
-    .left-photo,
+
     .right-photo,
     .left-image-container,
     .slider-container,
     .right-image-container,
     .photo-container-left,
     .photo-container-right {
+        width: auto;
+    }
+
+    .left-photo {
         width: auto;
         height: auto;
     }
@@ -642,7 +647,7 @@ body.dark-theme .language-icon a {
     }
 
     .photo-container-left {
-        border: none;
+        border-bottom: none;
     }
 
     .photo-container-left img {
@@ -656,12 +661,21 @@ body.dark-theme .language-icon a {
 
     .contact-columns, .contact-column {
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;
     }
 
     .contact-item {
         font-size: 20px;
         user-select: none;
+        backdrop-filter: blur(20px);
+        padding: 10px;
+        border-radius: 50px;
+    }
+
+    .contact-item svg {
+        width: 20px;
+        height: 20px;
+        fill: #FFF;
     }
 
     .left-button a, .right-button a {
@@ -670,6 +684,10 @@ body.dark-theme .language-icon a {
 
     .left-button a:hover, .right-button a:hover {
         transform: none;
+    }
+
+    .right-button {
+        border-top: none;
     }
 
     .footer {

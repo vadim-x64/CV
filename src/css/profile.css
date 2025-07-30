@@ -9,9 +9,8 @@ body {
     background-image: linear-gradient(to bottom, #EAEFF8, #E1E8FA, #E1E8FA, #D4DFFA);
     background-size: cover;
     background-repeat: no-repeat;
-    user-select: none;
     opacity: 0;
-    animation: fadeIn 1s ease-out 0.1s forwards;
+    animation: fadeIn 1s ease-out 0.5s forwards;
 }
 
 @keyframes fadeIn {
