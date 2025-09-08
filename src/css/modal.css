@@ -6,6 +6,11 @@
     margin-left: 30px;
 }
 
+.practice-button-container span {
+    font-size: 24px;
+    padding: 5px;
+}
+
 .practice-button-container button {
     font-size: 24px;
     background-color: transparent;
@@ -35,7 +40,7 @@
 
 .modal-content {
     background-color: #E1E8FA;
-    margin: 250px auto;
+    margin: 2% auto;
     padding: 20px;
     border: 5px solid #FFF;
     width: 100%;
@@ -44,6 +49,7 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(-20px);
     transition: transform 0.3s ease;
+    text-align: justify;
 }
 
 .modal-content ul {
@@ -61,6 +67,21 @@
     cursor: pointer;
 }
 
+body.dark-theme .practice-button-container button {
+    border-color: #FFF;
+    color: #FFF;
+}
+
+body.dark-theme .modal-content {
+    background-color: #28292A;
+    border-color: #222;
+    color: #FFF;
+}
+
+body.dark-theme .close {
+    color: #FFF;
+}
+
 @media screen and (max-width: 768px) {
     .practice-button-container {
         margin-left: 0;
@@ -72,5 +93,15 @@
 
     .practice-button-container button:hover {
         transform: none;
+    }
+
+    .modal-content {
+        width: auto;
+        margin: 6% auto;
+        font-size: 14px;
+    }
+
+    .modal-content h2 {
+        font-size: 18px;
     }
 }
