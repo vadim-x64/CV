@@ -1,0 +1,76 @@
+.practice-button-container {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.practice-button-container button {
+    font-size: 24px;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+.practice-button-container button:hover {
+    text-decoration: none;
+    transform: scaleX(1.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #E1E8FA;
+    margin: 250px auto;
+    padding: 20px;
+    border: 5px solid #FFF;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: #777;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .practice-button-container {
+        margin-left: 0;
+    }
+
+    .practice-button-container button {
+        font-size: 20px;
+    }
+
+    .practice-button-container button:hover {
+        transform: none;
+    }
+}
