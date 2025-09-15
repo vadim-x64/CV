@@ -232,6 +232,7 @@ img {
 .slide h2 {
     font-size: 60px;
     font-weight: normal;
+    text-transform: uppercase;
 }
 
 .nav-button {

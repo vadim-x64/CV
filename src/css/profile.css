@@ -252,6 +252,10 @@ body.dark-theme .download-btn {
     border-radius: 10px;
 }
 
+.hard-skills {
+    text-align: left;
+}
+
 .soft-skills ul {
     list-style: none;
     padding: 0;
@@ -261,7 +265,7 @@ body.dark-theme .download-btn {
 .soft-skills li {
     margin-bottom: 15px;
     font-size: 24px;
-    text-align: center;
+    text-align: left;
 }
 
 .edu-item, .exp-item {
