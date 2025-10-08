@@ -199,6 +199,14 @@ main {
     text-align: justify;
 }
 
+.project-content a {
+    color: #1C1CFF;
+}
+
+body.dark-theme .project-content a {
+    color: #3D8BFF;
+}
+
 .footer {
     position: relative;
     display: flex;
