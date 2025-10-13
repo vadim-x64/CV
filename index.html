@@ -16,21 +16,22 @@
 <div id="practiceModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Шукаю місце проходження практики</h2>
+        <h2>Шукаю місце для проходження виробничої практики</h2>
         <p>
-            Я студент 3 курсу університету, спеціалізуюся на розробці програмного забезпечення.
-            У 2026 році за навчальним планом проходитиму виробничу практику.
+            Я студент 3 курсу університету, навчаюсь за спеціальністю
+            Інженерія програмного забезпечення. У 2026 році на 2-му семестрі
+            навчання проходитиму виробничу практику. Розглядаю виробничу
+            практику не як формальність, а як можливість здобути практичний
+            досвід, навчитися нового та покращити свої здібності, щоб у
+            майбутньому отримати можливість для стажувань та професійного
+            розвитку. Буду радий будь-яким пропозиціям.
             <br><br>
             <b>Коротко про себе</b>
             <br><br>
-            * створював рішення для вебу, десктопу, ботів, міні-ігри (дивіться профіль GitHub); <br>
-            * маю базу в роботі з мовами .NET, Java, Python, JavaScript, базами даних та ін.; <br>
-            * цікавлюся архітектурою ПЗ, роботою з API та автоматизацією; <br>
-            * подобається рефакторити код та вручну тестувати написані функції.
-            <br><br>
-            Розглядаю практику в рамках навчального процесу не як шанс пройти заради галочки,
-            а як шанс отримати досвід, навчитися чогось нового, і, можливо, в майбутньому
-            потрапити на стажування. Буду радий будь-яким пропозиціям.
+            * розробляв рішення для вебу, наприклад такі проєкти як блог та онлайн ресторан (див. GitHub); <br>
+            * більше подобається писати софт для десктопу по типу .NET WPF, JavaFX; <br>
+            * маю базу в роботі з Java, C#, Python, JavaScript, базами даних; <br>
+            * подобається вручну тестувати написані функції та виправляти помилки в коді.
             <br><br>
             <b>На зв'язку</b>
         </p>
@@ -45,7 +46,7 @@
         <a href="index.html">Вадим Войцеховський</a>
     </div>
     <div class="practice-button-container">
-        <button id="practiceBtn">👉 Шукаю місце практики 👈</button>
+        <button id="practiceBtn">👉 ПОШУК ПРАКТИКИ 👈</button>
     </div>
     <nav class="nav-buttons">
         <a href="index.html" class="current">Головна</a>
@@ -59,8 +60,8 @@
             <img src="assets/images/main.png" alt="..."/>
         </div>
         <div class="about-me">
-            <h2>Розробник програмного забезпечення</h2>
-            <p>Backend-розробник</p>
+            <h2>Молодший ІТ-спеціаліст</h2>
+            <p>Студент, вчусь створювати програмні backend-рішення</p>
             <div class="container-label">Профіль</div>
         </div>
         <div class="right-photo">
@@ -73,7 +74,7 @@
             <img src="assets/images/style.png" alt="..."/>
         </div>
         <div class="slider-container">
-            <button class="nav-button prev">⇦</button>
+            <button class="nav-button prev">⭠</button>
             <div class="language-slider">
                 <div class="slide active">
                     <h2>.NET</h2>
@@ -139,7 +140,7 @@
                     <h2>Swagger</h2>
                 </div>
             </div>
-            <button class="nav-button next">⇨</button>
+            <button class="nav-button next">⭢</button>
             <div class="container-label">Стек</div>
         </div>
         <div class="right-image-container">
@@ -171,8 +172,6 @@
                                 <canvas class="spoiler-canvas"></canvas>
                             </div>
                         </div>
-                    </div>
-                    <div class="contact-column">
                         <div class="contact-item">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
                                  fill="#5f6368">
@@ -198,30 +197,27 @@
         </div>
         <div class="photo-container-right">
             <img src="assets/images/projects.png" alt="...">
+            <div class="social-buttons">
+                <div class="right-button">
+                    <a href="https://github.com/vadim-x64" target="_blank">GitHub</a>
+                </div>
+            </div>
             <div class="container-label">Проєкти</div>
         </div>
     </div>
-    <div class="social-buttons">
-        <div class="right-button">
-            <a href="https://github.com/vadim-x64" target="_blank">GitHub</a>
-        </div>
-    </div>
 </main>
-<footer class="footer">
+<div class="foot">
     <div class="language-toggle">
-        <div class="icon-container">
-            <span class="language-icon ua-icon">
-                <a href="src/en/index_en.html">EN</a>
-            </span>
-        </div>
+        <a href="src/en/index_en.html" class="language-icon">EN</a>
     </div>
     <div class="theme-toggle">
-        <div class="icon-container">
-            <span class="material-icons theme-icon sun-icon">light_mode</span>
-            <span class="material-icons theme-icon moon-icon">dark_mode</span>
-        </div>
+        <span class="material-icons theme-icon sun-icon">dark_mode</span>
+        <span class="material-icons theme-icon moon-icon">light_mode</span>
     </div>
-</footer>
+    <div class="scroll-to-top">
+        <span class="material-icons">arrow_upward</span>
+    </div>
+</div>
 <script src="src/js/index.js"></script>
 </body>
 </html>

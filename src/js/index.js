@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 document.querySelectorAll('.spoiler').forEach(spoiler => {
     const canvas = spoiler.querySelector('.spoiler-canvas');
     const ctx = canvas.getContext('2d');
@@ -131,5 +130,27 @@ document.querySelectorAll('.spoiler').forEach(spoiler => {
 
     spoiler.addEventListener('click', () => {
         spoiler.classList.toggle('active');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+    function checkScrollPosition() {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    }
+
+    checkScrollPosition();
+    window.addEventListener('scroll', checkScrollPosition);
+
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 });
