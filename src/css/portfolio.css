@@ -7,10 +7,8 @@ body {
     padding: 0;
     overflow-y: scroll;
     background-image: linear-gradient(to bottom, #EAEFF8, #E1E8FA, #E1E8FA, #D4DFFA);
-    background-size: cover;
-    background-repeat: no-repeat;
     opacity: 0;
-    animation: fadeIn 1s ease-out 0.5s forwards;
+    animation: fadeIn 2s ease-out 0.5s forwards;
 }
 
 @keyframes fadeIn {
@@ -28,33 +26,30 @@ header {
     left: 0;
     right: 0;
     z-index: 9999;
-    background: #EAEFF8;
+    background-color: #EAEFF8;
     transform: translateY(0);
     transition: transform 0.3s ease;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 5px solid #FFF;
+    border: 5px solid #FFFFFF;
 }
 
 .name {
-    padding: 35px 70px;
-    border-right: 5px solid #FFF;
+    padding: 50px 100px;
+    border-right: 5px solid #FFFFFF;
 }
 
 .name a {
     font-size: 36px;
     font-weight: bold;
     text-decoration: none;
-    color: #000;
-}
-
-.nav-buttons {
-    margin-right: 30px;
+    color: #000000;
 }
 
 .nav-buttons a.current {
-    color: #777;
+    color: #666666;
+    text-decoration: underline;
 }
 
 .nav-buttons a.current:hover {
@@ -64,29 +59,28 @@ header {
 .nav-buttons a {
     text-decoration: none;
     font-size: 24px;
-    font-weight: lighter;
-    padding: 35px 20px;
-    color: #000;
+    padding: 40px 10px;
+    color: #000000;
     text-transform: uppercase;
     display: inline-block;
     transition: transform 0.3s ease;
 }
 
 .nav-buttons a:hover {
-    text-decoration: none;
     transform: scaleX(1.1);
 }
 
 main {
-    border-bottom: 5px solid #FFF;
-    border-right: 5px solid #FFF;
-    border-left: 5px solid #FFF;
+    border-bottom: 5px solid #FFFFFF;
+    border-right: 5px solid #FFFFFF;
+    border-left: 5px solid #FFFFFF;
+    margin-top: 100px;
 }
 
 .git {
     position: absolute;
-    top: 170px;
-    right: 60px;
+    top: 200px;
+    right: 70px;
     background: #222;
     border-radius: 50%;
     width: 80px;
@@ -154,24 +148,23 @@ main {
 
 .container {
     max-width: 1080px;
-    margin: 100px auto;
+    margin: auto;
 }
 
 .projects h2 {
-    margin: 100px 0 40px 0;
+    margin: 0 0 40px 0;
     padding-top: 100px;
     font-size: 32px;
-    font-weight: normal;
 }
 
 .project-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 50px;
 }
 
 .project-card:nth-child(-n+2) {
-    border-top: 1px solid #000;
+    border-top: 1px solid #000000;
     padding-top: 20px;
 }
 
@@ -207,60 +200,99 @@ body.dark-theme .project-content a {
     color: #3D8BFF;
 }
 
-.footer {
-    position: relative;
+.foot {
+    z-index: 999;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
-    color: #333;
-    width: 100%;
-    height: 70px;
-    font-size: 18px;
-    font-weight: normal;
+    gap: 20px;
 }
 
-.language-toggle {
-    position: absolute;
-    right: 75px;
-    cursor: pointer;
-}
-
-.language-icon {
-    position: absolute;
-    bottom: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.language-icon a {
-    text-decoration: none;
-    color: #333;
-    font-size: 21px;
+.language-toggle a, .theme-icon {
+    font-size: 24px;
     font-weight: bold;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #FFFFFF;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    padding: 15px;
+    border-radius: 50%;
 }
 
-.theme-toggle {
-    position: absolute;
-    right: 30px;
-    cursor: pointer;
-}
-
-.icon-container {
-    position: relative;
-    width: 30px;
-    height: 30px;
+.language-toggle a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    box-sizing: content-box;
 }
 
 .theme-icon {
     position: absolute;
-    bottom: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    color: #333;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+}
+
+.language-toggle a:hover,
+.theme-toggle:hover .theme-icon {
+    color: #333333;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.theme-toggle {
+    position: relative;
+    width: 54px;
+    height: 54px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun-icon {
+    opacity: 1;
+    transform: rotate(0deg);
 }
 
 .moon-icon {
-    transform: rotate(180deg);
     opacity: 0;
+    transform: rotate(180deg);
+}
+
+.scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top .material-icons {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #FFFFFF;
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.scroll-to-top:hover .material-icons {
+    color: #333333;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 body.dark-theme .sun-icon {
@@ -366,7 +398,7 @@ body.dark-theme .git:after {
 
 @media screen and (max-width: 768px) {
     body.dark-theme .name {
-        border-right-color: #FFF;
+        border-right-color: #FFFFFF;
     }
 
     header {
@@ -403,9 +435,9 @@ body.dark-theme .git:after {
         transform: none;
     }
 
-    .container {
+    main {
         padding: 10px;
-        margin: 100px 0 0 0;
+        margin-top: 250px;
     }
 
     .projects h2 {
@@ -434,7 +466,7 @@ body.dark-theme .git:after {
     }
 
     .git {
-        top: 300px;
+        top: 350px;
         right: 30px;
         width: 60px;
         height: 60px;
@@ -443,5 +475,21 @@ body.dark-theme .git:after {
     .git img {
         width: 50px;
         height: 50px;
+    }
+
+    .foot {
+        bottom: 10px;
+        left: 10px;
+        gap: 10px;
+    }
+
+    .language-toggle a, .theme-icon {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .scroll-to-top .material-icons {
+        font-size: 24px;
+        padding: 10px;
     }
 }

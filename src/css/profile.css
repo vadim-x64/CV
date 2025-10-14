@@ -509,6 +509,10 @@ body.dark-theme .language-option {
 }
 
 @media screen and (max-width: 768px) {
+    body.dark-theme .name {
+        border-right-color: #FFFFFF;
+    }
+
     header {
         flex-direction: column;
         align-items: flex-start;
