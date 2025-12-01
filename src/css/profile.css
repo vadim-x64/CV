@@ -230,19 +230,7 @@ body.dark-theme .download-btn {
     height: auto;
 }
 
-.hard-skills {
-    text-align: left;
-}
-
-.soft-skills ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.soft-skills li {
-    margin-bottom: 15px;
-    font-size: 24px;
+.hard-skills, .soft-skills {
     text-align: left;
 }
 
@@ -566,7 +554,7 @@ body.dark-theme .language-option {
     }
 
     .soft-skills {
-        margin: 50px 0 100px 0;
+        margin: 0;
     }
 
     .languages {
