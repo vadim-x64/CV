@@ -45,9 +45,8 @@
     transition: transform 0.3s ease;
 }
 
-.modal-content ul {
-    list-style: none;
-    padding: 0;
+.modal-content p {
+    text-align: justify;
 }
 
 .close {

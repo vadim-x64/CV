@@ -93,15 +93,40 @@ img {
     height: 700px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     border: 5px solid #FFFFFF;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
 }
 
 .left-photo img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    transition: opacity 1s ease, filter 1s ease;
+}
+
+.left-photo img.blurred {
+    filter: blur(0px);
+    opacity: 0;
+}
+
+.left-photo-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: filter 0.5s ease;
+    z-index: 2;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.left-photo.revealed .left-photo-canvas {
+    opacity: 0;
 }
 
 .about-me {
@@ -210,8 +235,6 @@ img {
     font-size: 60px;
     text-transform: uppercase;
 }
-
-
 
 .nav-button {
     position: absolute;
@@ -410,7 +433,7 @@ img {
 
 .theme-icon {
     position: absolute;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease, color 0.5s ease;
     pointer-events: none;
 }
 

@@ -93,8 +93,56 @@ document.addEventListener('DOMContentLoaded', function() {
     const leftPhoto = document.querySelector('.left-photo');
     const leftPhotoImg = document.querySelector('.left-photo img');
 
+    const canvas = document.createElement('canvas');
+    canvas.className = 'left-photo-canvas';
+    leftPhoto.appendChild(canvas);
+
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+        canvas.width = leftPhoto.offsetWidth;
+        canvas.height = leftPhoto.offsetHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    let balls = [];
+
+    for (let i = 0; i < 2000; i++) {
+        balls.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            r: Math.random() * 2.5 + 1,
+            dx: (Math.random() - 0.5) * 1.2,
+            dy: (Math.random() - 0.5) * 1.2
+        });
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "#FFF";
+
+        balls.forEach(b => {
+            ctx.beginPath();
+            ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+            ctx.fill();
+            b.x += b.dx;
+            b.y += b.dy;
+            if (b.x < 0 || b.x > canvas.width) b.dx *= -1;
+            if (b.y < 0 || b.y > canvas.height) b.dy *= -1;
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    leftPhotoImg.classList.add('blurred');
+
     leftPhoto.addEventListener('click', function() {
-        leftPhotoImg.classList.toggle('revealed');
+        leftPhoto.classList.toggle('revealed');
+        leftPhotoImg.classList.toggle('blurred');
     });
 });
 
