@@ -1,5 +1,6 @@
 * {
     font-family: "Jura", serif;
+    transition: all 0.5s ease;
 }
 
 body {
