@@ -33,11 +33,13 @@
             <h2>Проєкти</h2>
             <div class="project-gallery">
                 <div class="project-card">
-                    <img src="../../assets/images/spots.png" alt="...">
+                    <div class="image-wrapper">
+                        <img src="../../assets/images/spots.png" alt="..." data-image="../../assets/images/spots.png">
+                    </div>
                     <div class="project-content">
                         <h3>TopKidGame</h3>
                         <p>
-                            Інтерактивна головоломка "П’ятнашки", реалізована на JavaScript,
+                            Інтерактивна головоломка "П'ятнашки", реалізована на JavaScript,
                             підійде для дітей і дорослих. Має дружній мультяшний інтерфейс,
                             музику на фоні та базові налаштування для комфортної гри. Сприяє
                             розвитку логічного мислення й може слугувати як розвага, так
@@ -47,7 +49,9 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="../../assets/images/chatbot.png" alt="...">
+                    <div class="image-wrapper">
+                        <img src="../../assets/images/chatbot.png" alt="..." data-image="../../assets/images/chatbot.png">
+                    </div>
                     <div class="project-content">
                         <h3>Chatbot</h3>
                         <p>
@@ -61,7 +65,9 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="../../assets/images/todo.png" alt="...">
+                    <div class="image-wrapper">
+                        <img src="../../assets/images/todo.png" alt="..." data-image="../../assets/images/todo.png">
+                    </div>
                     <div class="project-content">
                         <h3>SmartToDo</h3>
                         <p>
@@ -75,12 +81,14 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="../../assets/images/media.png" alt="...">
+                    <div class="image-wrapper">
+                        <img src="../../assets/images/media.png" alt="..." data-image="../../assets/images/media.png">
+                    </div>
                     <div class="project-content">
                         <h3>MediaApp</h3>
                         <p>
                             Десктопний застосунок на .NET WPF, який автоматично
-                            знаходить дублікати фото та відео на комп’ютері. Аналізує якість
+                            знаходить дублікати фото та відео на комп'ютері. Аналізує якість
                             файлів і дозволяє швидко видалити зайві копії, залишаючи найкращі.
                             Ефективний інструмент для звільнення непотрібних медіафайлів
                             та впорядкування медіатеки. Працює тільки під керуванням Windows.
@@ -88,18 +96,27 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="../../assets/images/c2.png" alt="...">
+                    <div class="image-wrapper">
+                        <img src="../../assets/images/c2.jpg" alt="..." data-image="../../assets/images/c2.jpg">
+                    </div>
                 </div>
                 <div class="project-card">
-                    <img src="../../assets/images/c3.png" alt="...">
+                    <div class="image-wrapper">
+                        <img src="../../assets/images/c3.jpg" alt="..." data-image="../../assets/images/c3.jpg">
+                    </div>
                 </div>
                 <div class="project-card">
-                    <img src="../../assets/images/c4.jpg" alt="...">
+                    <div class="image-wrapper">
+                        <img src="../../assets/images/c4.jpg" alt="..." data-image="../../assets/images/c4.jpg">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </main>
+<div class="modal" id="imageModal">
+    <img src="" alt="..." id="modalImage">
+</div>
 <div class="foot">
     <div class="language-toggle">
         <a href="../en/portfolio_en.html" class="language-icon">EN</a>
