@@ -48,6 +48,17 @@ header {
     color: #000000;
 }
 
+.santa-hat {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    top: 40px;
+    left: 86px;
+    transform: rotate(-15deg);
+    pointer-events: auto;
+    z-index: 10;
+}
+
 .nav-buttons a.current {
     color: #666666;
     text-decoration: underline;

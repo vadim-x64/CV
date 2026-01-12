@@ -773,7 +773,7 @@ body.dark-theme .nav-button:hover {
         backdrop-filter: blur(20px);
         padding: 10px;
         border-radius: 50px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     .contact-item svg {
