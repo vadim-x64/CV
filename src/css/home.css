@@ -1,3 +1,4 @@
+/* ── Content panels ──────────────────────────────────────── */
 .content {
     display: flex;
     align-items: center;
@@ -34,10 +35,8 @@
 
 .left-photo-canvas {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     z-index: 2;
     transition: opacity 0.5s ease;
     pointer-events: none;
@@ -47,6 +46,7 @@
     opacity: 0;
 }
 
+/* .page-home scoped because .about-me also exists in Profile */
 .page-home .about-me {
     width: 550px;
     height: 700px;
@@ -106,6 +106,7 @@
     text-transform: uppercase;
 }
 
+/* ── Slider section ─────────────────────────────────────── */
 .new-section,
 .photo-section {
     display: flex;
@@ -184,6 +185,7 @@
     position: relative;
 }
 
+/* ── Contacts section ───────────────────────────────────── */
 .photo-container-left {
     width: 100%;
     height: 700px;
@@ -198,15 +200,11 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
-    right: 0;
+    left: 0; right: 0;
     display: flex;
     justify-content: center;
-    backdrop-filter: blur(10px);
     margin: auto 150px;
     padding: 50px;
-    border-radius: 10px;
-    border: 1px solid #ffffff;
 }
 
 .contact-columns {
@@ -227,6 +225,10 @@
     color: #ffffff;
     font-size: 24px;
     width: 100%;
+    backdrop-filter: blur(10px);
+    border: 1px solid #ffffff;
+    border-radius: 200px;
+    padding: 10px 20px;
 }
 
 .contact-item svg {
@@ -258,10 +260,8 @@
 
 .spoiler-canvas {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background-color: transparent;
     z-index: 1;
     transition: opacity 0.3s ease;
@@ -272,6 +272,7 @@
     pointer-events: none;
 }
 
+/* ── GitHub / Portfolio panel ───────────────────────────── */
 .photo-container-right {
     width: 100%;
     height: 700px;
@@ -315,6 +316,7 @@
     transform: scaleX(1.1);
 }
 
+/* ── Dark Theme — home specific ─────────────────────────── */
 body.dark-theme .left-photo,
 body.dark-theme .page-home .about-me,
 body.dark-theme .right-photo,
@@ -343,6 +345,7 @@ body.dark-theme .nav-button:hover {
     color: #333333;
 }
 
+/* ── Media Queries — home ───────────────────────────────── */
 @media screen and (min-width: 1081px) and (max-width: 1200px) {
     .contact-overlay {
         margin: auto 50px;
@@ -465,23 +468,24 @@ body.dark-theme .nav-button:hover {
     }
 
     .contact-overlay {
-        margin: 20px;
-        padding: 30px 20px;
+        margin: 10px;
+        padding: 15px 10px;
     }
 
     .contact-columns,
     .contact-column {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         width: 100%;
     }
 
     .contact-item {
-        font-size: 16px;
-        backdrop-filter: blur(20px);
-        padding: 10px;
-        border-radius: 50px;
+        font-size: 15px;
+        padding: 8px 12px;
+        border-radius: 200px;
         flex-wrap: nowrap;
+        box-sizing: border-box;
+        width: 100%;
     }
 
     .contact-item svg {

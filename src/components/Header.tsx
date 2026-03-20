@@ -8,6 +8,7 @@ const Header = () => {
     useEffect(() => {
         const el = headerRef.current
         if (!el) return
+
         let lastScroll = 0
 
         const handleScroll = () => {
@@ -17,7 +18,6 @@ const Header = () => {
                 lastScroll = current
                 return
             }
-
             el.style.transform =
                 current > lastScroll && current > 100
                     ? 'translateY(-100%)'
@@ -35,7 +35,6 @@ const Header = () => {
     return (
         <header ref={headerRef}>
             <div className="name">
-                <img src="/images/label.png" alt="" className="santa-hat"/>
                 <Link to="/">Вадим Войцеховський</Link>
             </div>
             <nav className="nav-buttons">
