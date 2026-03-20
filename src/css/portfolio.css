@@ -1,92 +1,12 @@
-* {
-    font-family: "Jura", serif;
-    transition: all 0.5s ease;
+.page-portfolio main {
+    border-bottom: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    border-left: 5px solid #ffffff;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    overflow-y: scroll;
-    background-image: linear-gradient(to bottom, #EAEFF8, #E1E8FA, #E1E8FA, #D4DFFA);
-    opacity: 0;
-    animation: fadeIn 2s ease-out 0.5s forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    background-color: #EAEFF8;
-    transform: translateY(0);
-    transition: transform 0.3s ease;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 5px solid #FFFFFF;
-}
-
-.name {
-    padding: 50px 100px;
-    border-right: 5px solid #FFFFFF;
-}
-
-.name a {
-    font-size: 36px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000000;
-}
-
-.santa-hat {
-    position: absolute;
-    width: 40px;
-    height: auto;
-    top: 40px;
-    left: 86px;
-    transform: rotate(-15deg);
-    pointer-events: auto;
-    z-index: 10;
-}
-
-.nav-buttons a.current {
-    color: #666666;
-    text-decoration: underline;
-}
-
-.nav-buttons a.current:hover {
-    transform: none;
-}
-
-.nav-buttons a {
-    text-decoration: none;
-    font-size: 24px;
-    padding: 40px 10px;
-    color: #000000;
-    text-transform: uppercase;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.nav-buttons a:hover {
-    transform: scaleX(1.1);
-}
-
-main {
-    border-bottom: 5px solid #FFFFFF;
-    border-right: 5px solid #FFFFFF;
-    border-left: 5px solid #FFFFFF;
-    margin-top: 100px;
+.container {
+    max-width: 1080px;
+    margin: auto;
 }
 
 .git {
@@ -105,7 +25,7 @@ main {
     animation: bounce 1.2s infinite alternate;
 }
 
-.git:before {
+.git::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -113,9 +33,10 @@ main {
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     animation: emitRings 2s infinite;
+    pointer-events: none;
 }
 
-.git:after {
+.git::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -123,19 +44,12 @@ main {
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     animation: emitRings 2s infinite 1s;
-}
-
-.git:before,
-.git:after {
     pointer-events: none;
 }
 
 .git img {
     width: 70px;
     height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 @keyframes bounce {
@@ -156,11 +70,6 @@ main {
         transform: scale(1.5);
         opacity: 0;
     }
-}
-
-.container {
-    max-width: 1080px;
-    margin: auto;
 }
 
 .projects h2 {
@@ -184,29 +93,6 @@ main {
     cursor: pointer;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 10000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal.active {
-    display: flex;
-}
-
-.modal img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
 .project-card:nth-child(-n+2) {
     border-top: 1px solid #000000;
     padding-top: 20px;
@@ -217,8 +103,6 @@ main {
     height: 300px;
     margin-bottom: 20px;
     pointer-events: none;
-    -webkit-user-drag: none;
-    -webkit-touch-callout: none;
     object-fit: fill;
     object-position: center;
 }
@@ -237,202 +121,67 @@ main {
 }
 
 .project-content a {
-    color: #1C1CFF;
+    color: #1c1cff;
 }
 
-body.dark-theme .project-content a {
-    color: #3D8BFF;
-}
-
-.foot {
-    z-index: 999;
+.page-portfolio .modal {
+    display: none;
     position: fixed;
-    bottom: 20px;
-    left: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-
-.language-toggle a, .theme-icon {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FFFFFF;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid #FFFFFF;
-    transition: background-color 0.5s ease, color 0.5s ease;
-    padding: 15px;
-    border-radius: 50%;
-}
-
-.language-toggle a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
-    box-sizing: content-box;
-}
-
-.theme-icon {
-    position: absolute;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    pointer-events: none;
-}
-
-.language-toggle a:hover,
-.theme-toggle:hover .theme-icon {
-    color: #333333;
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.theme-toggle {
-    position: relative;
-    width: 54px;
-    height: 54px;
-    cursor: pointer;
-    display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.sun-icon {
-    opacity: 1;
-    transform: rotate(0deg);
-}
-
-.moon-icon {
-    opacity: 0;
-    transform: rotate(180deg);
-}
-
-.scroll-to-top {
+.page-portfolio .modal.active {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease, background-color 0.5s ease, color 0.5s ease;
 }
 
-.scroll-to-top.visible {
-    opacity: 1;
-    visibility: visible;
+.page-portfolio .modal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.scroll-to-top .material-icons {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid #FFFFFF;
-    padding: 15px;
-    border-radius: 50%;
-    transition: background-color 0.5s ease, color 0.5s ease;
+body.dark-theme .page-portfolio main {
+    border-color: #222;
 }
 
-.scroll-to-top:hover .material-icons {
-    color: #333333;
-    background-color: rgba(255, 255, 255, 1);
-}
-
-body.dark-theme .sun-icon {
-    transform: rotate(-180deg);
-    opacity: 0;
-}
-
-body.dark-theme .moon-icon {
-    transform: rotate(0);
-    opacity: 1;
-}
-
-body.dark-theme {
-    background-image: linear-gradient(135deg, #575B66, #505359, #484A4D);
-}
-
-body.dark-theme header {
-    background: #28292A;
-}
-
-body.dark-theme header,
-body.dark-theme .name,
-body.dark-theme main,
 body.dark-theme .container,
 body.dark-theme .projects,
 body.dark-theme .project-card {
     border-color: #222;
 }
 
-body.dark-theme .name a,
-body.dark-theme .nav-buttons a,
 body.dark-theme .projects h2,
 body.dark-theme .project-content h3,
-body.dark-theme .project-content p,
-body.dark-theme .footer-text {
-    color: #FFF;
+body.dark-theme .project-content p {
+    color: #ffffff;
 }
 
-body.dark-theme .nav-buttons a.current {
-    color: #777;
-}
-
-body.dark-theme .theme-icon,
-body.dark-theme .language-icon a {
-    color: #FFF;
-}
-
-body.dark-theme {
-    background-image: linear-gradient(135deg, #4C4F59, #393C40, #303133);
+body.dark-theme .project-content a {
+    color: #3d8bff;
 }
 
 body.dark-theme .project-card:nth-child(-n+2) {
-    border-top-color: #FFF;
+    border-top-color: #ffffff;
 }
 
-body.dark-theme .git:before {
-    border: 2px solid rgba(255, 255, 255, 0.5);
+body.dark-theme .git::before {
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
-body.dark-theme .git:after {
-    border: 2px solid rgba(255, 255, 255, 0.5);
-}
-
-@media screen and (min-width: 1081px) and (max-width: 1200px) {
-    .nav-buttons a:hover {
-        transform: none;
-    }
-
-    .container {
-        max-width: 1020px;
-    }
+body.dark-theme .git::after {
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 @media screen and (min-width: 769px) and (max-width: 1080px) {
-    body.dark-theme .name {
-        border-right-color: #FFF;
-    }
-
     .container {
         margin: 150px 20px 100px 20px;
-    }
-
-    .nav-buttons {
-        flex-direction: column;
-        padding: 5px;
-    }
-
-    .nav-buttons a {
-        padding: 10px 0;
-        margin-bottom: 5px;
-        width: 100%;
-        text-align: right;
-    }
-
-    .nav-buttons a:hover {
-        transform: none;
     }
 
     .git {
@@ -441,49 +190,6 @@ body.dark-theme .git:after {
 }
 
 @media screen and (max-width: 768px) {
-    body.dark-theme .name {
-        border-right-color: #FFFFFF;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 20px;
-    }
-
-    .name {
-        padding: 10px 5px;
-        margin-bottom: 10px;
-    }
-
-    .name a {
-        font-size: 24px;
-        margin-right: 10px;
-    }
-
-    .nav-buttons {
-        flex-direction: column;
-        padding: 5px;
-    }
-
-    .nav-buttons a {
-        padding: 10px 0;
-        margin-bottom: 5px;
-        font-size: 20px;
-        width: 100%;
-        text-align: left;
-    }
-
-    .nav-buttons a:hover {
-        transform: none;
-    }
-
-    main {
-        padding: 10px;
-        margin-top: 250px;
-    }
-
     .projects h2 {
         font-size: 28px;
     }
@@ -500,15 +206,6 @@ body.dark-theme .git:after {
         height: auto;
     }
 
-    .footer {
-        font-size: 16px;
-    }
-
-    .icon-container {
-        width: 25px;
-        height: 25px;
-    }
-
     .git {
         top: 350px;
         right: 30px;
@@ -519,21 +216,5 @@ body.dark-theme .git:after {
     .git img {
         width: 50px;
         height: 50px;
-    }
-
-    .foot {
-        bottom: 10px;
-        left: 10px;
-        gap: 10px;
-    }
-
-    .language-toggle a, .theme-icon {
-        font-size: 18px;
-        padding: 10px;
-    }
-
-    .scroll-to-top .material-icons {
-        font-size: 24px;
-        padding: 10px;
     }
 }

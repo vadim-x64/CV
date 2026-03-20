@@ -1,92 +1,7 @@
-* {
-    font-family: "Jura", serif;
-    transition: all 0.5s ease;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    overflow-y: scroll;
-    background-image: linear-gradient(to bottom, #EAEFF8, #E1E8FA, #E1E8FA, #D4DFFA);
-    opacity: 0;
-    animation: fadeIn 2s ease-out 0.5s forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    background-color: #EAEFF8;
-    transform: translateY(0);
-    transition: transform 0.3s ease;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 5px solid #FFFFFF;
-}
-
-.name {
-    padding: 50px 100px;
-    border-right: 5px solid #FFFFFF;
-}
-
-.name a {
-    font-size: 36px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000000;
-}
-
-.santa-hat {
-    position: absolute;
-    width: 40px;
-    height: auto;
-    top: 40px;
-    left: 86px;
-    transform: rotate(-15deg);
-    pointer-events: auto;
-    z-index: 10;
-}
-
-.nav-buttons a.current {
-    color: #666666;
-    text-decoration: underline;
-}
-
-.nav-buttons a.current:hover {
-    transform: none;
-}
-
-.nav-buttons a {
-    text-decoration: none;
-    font-size: 24px;
-    padding: 40px 10px;
-    color: #000000;
-    text-transform: uppercase;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.nav-buttons a:hover {
-    transform: scaleX(1.1);
-}
-
-main {
-    border-bottom: 5px solid #FFFFFF;
-    border-right: 5px solid #FFFFFF;
-    border-left: 5px solid #FFFFFF;
-    margin-top: 100px;
+.page-profile main {
+    border-bottom: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    border-left: 5px solid #ffffff;
 }
 
 .container {
@@ -94,19 +9,30 @@ main {
     margin: auto;
 }
 
-.about-me, .skills, .skills-container, .education, .experience, .education-grid, .experience-grid {
+.page-profile .about-me,
+.skills,
+.skills-container,
+.education,
+.experience,
+.education-grid,
+.experience-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
 }
 
-.about-me h2, .skills h2, .education h2, .experience h2 {
+.page-profile .about-me h2,
+.skills h2,
+.education h2,
+.experience h2 {
     margin: 100px 0 20px 0;
     grid-column: span 2;
     font-size: 40px;
 }
 
-.about-me p, .hard-skills, .soft-skills {
+.page-profile .about-me p,
+.hard-skills,
+.soft-skills {
     border-top: 1px solid #000000;
     padding-top: 20px;
     text-align: justify;
@@ -115,13 +41,17 @@ main {
     margin: 0;
 }
 
-.about-me p a {
-    text-decoration: none;
-    color: #24249A;
+.download-btn {
+    background: none;
+    border: none;
+    color: #1c1cff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    transition: color 0.3s ease;
 }
 
-.modal {
-    display: none;
+.page-profile .modal {
     position: fixed;
     z-index: 999;
     left: 0;
@@ -129,21 +59,22 @@ main {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.modal.show {
-    display: block;
+.page-profile .modal.show {
+    visibility: visible;
     opacity: 1;
 }
 
 .modal-content {
     position: relative;
-    background-color: #EAEFF8;
+    background-color: #eaeff8;
     margin: 250px auto;
     padding: 20px;
-    border: 5px solid #FFFFFF;
+    border: 5px solid #ffffff;
     width: 100%;
     max-width: 450px;
     border-radius: 5px;
@@ -156,7 +87,7 @@ main {
     font-size: 24px;
 }
 
-.modal.show .modal-content {
+.page-profile .modal.show .modal-content {
     transform: translateY(0);
 }
 
@@ -195,20 +126,6 @@ main {
     font-size: 18px;
 }
 
-.download-btn {
-    background: none;
-    border: none;
-    color: #1C1CFF;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 0;
-    transition: color 0.3s ease;
-}
-
-body.dark-theme .download-btn {
-    color: #3D8BFF;
-}
-
 .skills-container {
     grid-column: span 2;
     margin-bottom: 50px;
@@ -242,199 +159,73 @@ body.dark-theme .download-btn {
     height: auto;
 }
 
-.hard-skills, .soft-skills {
+.hard-skills,
+.soft-skills {
     text-align: left;
 }
 
-.edu-item, .exp-item {
+.edu-item,
+.exp-item {
     border-top: 1px solid #000000;
     padding-top: 20px;
     text-align: justify;
     margin: 0;
 }
 
-.edu-item:not(:first-child), .exp-item:not(:first-child) {
+.edu-item:not(:first-child),
+.exp-item:not(:first-child) {
     border-top: none;
 }
 
-.edu-item .title, .exp-item .title {
+.edu-item .title,
+.exp-item .title {
     font-size: 20px;
     font-weight: bold;
     margin: 0;
 }
 
-.edu-item .period, .exp-item .period {
+.edu-item .period,
+.exp-item .period {
     font-size: 16px;
     color: #777777;
     margin: 5px auto;
 }
 
-.edu-item .txt, .exp-item .txt {
+.edu-item .txt,
+.exp-item .txt {
     font-size: 18px;
     margin: 30px auto;
 }
 
-.education-grid, .experience-grid {
+.education-grid,
+.experience-grid {
     grid-column: span 2;
 }
 
-.foot {
-    z-index: 999;
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-
-.language-toggle a, .theme-icon {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid #FFFFFF;
-    transition: background-color 0.5s ease, color 0.5s ease;
-    padding: 15px;
-    border-radius: 50%;
-}
-
-.language-toggle a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    box-sizing: content-box;
-}
-
-.theme-icon {
-    position: absolute;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    pointer-events: none;
-}
-
-.language-toggle a:hover,
-.theme-toggle:hover .theme-icon {
-    color: #333333;
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.theme-toggle {
-    position: relative;
-    width: 54px;
-    height: 54px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sun-icon {
-    opacity: 1;
-    transform: rotate(0deg);
-}
-
-.moon-icon {
-    opacity: 0;
-    transform: rotate(180deg);
-}
-
-.scroll-to-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease, background-color 0.5s ease, color 0.5s ease;
-}
-
-.scroll-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.scroll-to-top .material-icons {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid #FFFFFF;
-    padding: 15px;
-    border-radius: 50%;
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.scroll-to-top:hover .material-icons {
-    color: #333333;
-    background-color: rgba(255, 255, 255, 1);
-}
-
-body.dark-theme .sun-icon {
-    transform: rotate(-180deg);
-    opacity: 0;
-}
-
-body.dark-theme .moon-icon {
-    transform: rotate(0);
-    opacity: 1;
-}
-
-body.dark-theme {
-    background-image: linear-gradient(135deg, #4C4F59, #393C40, #303133);
-}
-
-body.dark-theme header {
-    background: #28292A;
-}
-
-body.dark-theme header,
-body.dark-theme .name,
-body.dark-theme main {
+body.dark-theme .page-profile main {
     border-color: #222;
 }
 
-body.dark-theme .about-me p,
+body.dark-theme .page-profile .about-me p,
 body.dark-theme .hard-skills,
 body.dark-theme .soft-skills,
 body.dark-theme .edu-item,
 body.dark-theme .exp-item {
-    border-color: #FFF;
+    border-color: #ffffff;
 }
 
-body.dark-theme .name a,
-body.dark-theme .nav-buttons a,
-body.dark-theme .about-me h2,
-body.dark-theme .about-me p,
+body.dark-theme .page-profile .about-me h2,
+body.dark-theme .page-profile .about-me p,
 body.dark-theme .skills h2,
 body.dark-theme .education h2,
 body.dark-theme .experience h2,
 body.dark-theme .skill p,
-body.dark-theme .soft-skills li,
 body.dark-theme .edu-item .title,
 body.dark-theme .exp-item .title,
 body.dark-theme .edu-item .txt,
 body.dark-theme .exp-item .txt,
-body.dark-theme .language-item,
-body.dark-theme .footer-text {
-    color: #FFF;
-}
-
-body.dark-theme .about-me p a {
-    color: #4A4AFF;
-    font-weight: bold;
-}
-
-body.dark-theme .nav-buttons a.current {
-    color: #777;
-}
-
-body.dark-theme .theme-icon,
-body.dark-theme .language-icon a {
-    color: #FFF;
+body.dark-theme .language-item {
+    color: #ffffff;
 }
 
 body.dark-theme .edu-item .period,
@@ -443,46 +234,20 @@ body.dark-theme .exp-item .period {
 }
 
 body.dark-theme .modal-content {
-    background-color: #28292A;
+    background-color: #28292a;
     border-color: #222;
-    color: #FFF;
+    color: #ffffff;
 }
 
 body.dark-theme .language-option {
-    color: #FFF;
+    color: #ffffff;
 }
 
-@media screen and (min-width: 1081px) and (max-width: 1200px) {
-    .nav-buttons a:hover {
-        transform: none;
-    }
-
-    .container {
-        max-width: 1020px;
-    }
+body.dark-theme .download-btn {
+    color: #3d8bff;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1080px) {
-    body.dark-theme .name {
-        border-right-color: #FFFFFF;
-    }
-
-    .nav-buttons {
-        flex-direction: column;
-        padding: 5px;
-    }
-
-    .nav-buttons a {
-        padding: 10px 0;
-        margin-bottom: 5px;
-        width: 100%;
-        text-align: right;
-    }
-
-    .nav-buttons a:hover {
-        transform: none;
-    }
-
     .container {
         margin: 150px 20px 100px 20px;
     }
@@ -509,55 +274,21 @@ body.dark-theme .language-option {
 }
 
 @media screen and (max-width: 768px) {
-    body.dark-theme .name {
-        border-right-color: #FFFFFF;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 20px;
-    }
-
-    .name {
-        padding: 10px 5px;
-        margin-bottom: 10px;
-    }
-
-    .name a {
-        font-size: 24px;
-        margin-right: 10px;
-    }
-
-    .nav-buttons {
-        flex-direction: column;
-        padding: 5px;
-    }
-
-    .nav-buttons a {
-        padding: 10px 0;
-        margin-bottom: 5px;
-        font-size: 20px;
-        width: 100%;
-        text-align: left;
-    }
-
-    .nav-buttons a:hover {
-        transform: none;
-    }
-
-    main {
-        padding: 10px;
-        margin-top: 250px;
-    }
-
-    .about-me h2, .skills h2, .education h2, .experience h2 {
+    .page-profile .about-me h2,
+    .skills h2,
+    .education h2,
+    .experience h2 {
         font-size: 28px;
         grid-column: span 1;
     }
 
-    .about-me, .skills, .skills-container, .education, .experience, .education-grid, .experience-grid {
+    .page-profile .about-me,
+    .skills,
+    .skills-container,
+    .education,
+    .experience,
+    .education-grid,
+    .experience-grid {
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -573,24 +304,6 @@ body.dark-theme .language-option {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
-    }
-
-    .about-me > p:not(:first-of-type),
-    .skills-container > div:not(:first-child),
-    .edu-item:not(:first-child),
-    .exp-item:not(:first-child),
-    .hard-skills .skill:not(:first-child),
-    .soft-skills li:not(:first-child) {
-        border-top: none;
-    }
-
-    .footer {
-        font-size: 16px;
-    }
-
-    .icon-container {
-        width: 25px;
-        height: 25px;
     }
 
     .modal-content {
@@ -612,21 +325,5 @@ body.dark-theme .language-option {
 
     .language-option span {
         font-size: 14px;
-    }
-
-    .foot {
-        bottom: 10px;
-        left: 10px;
-        gap: 10px;
-    }
-
-    .language-toggle a, .theme-icon {
-        font-size: 18px;
-        padding: 10px;
-    }
-
-    .scroll-to-top .material-icons {
-        font-size: 24px;
-        padding: 10px;
     }
 }
