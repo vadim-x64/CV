@@ -26,7 +26,7 @@ const Spoiler = ({children}: Props) => {
         resize()
         window.addEventListener('resize', resize)
 
-        const balls: Ball[] = Array.from({length: 200}, () => ({
+        const balls: Ball[] = Array.from({length: 300}, () => ({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
             r: Math.random() * 1.5 + 0.5,

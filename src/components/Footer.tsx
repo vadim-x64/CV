@@ -21,16 +21,17 @@ const Footer = () => {
 
     return (
         <div className="foot">
-            <div className="theme-toggle" onClick={() => setIsDark(d => !d)}>
-                <span className="material-icons theme-icon sun-icon">dark_mode</span>
-                <span className="material-icons theme-icon moon-icon">light_mode</span>
-            </div>
             <div
                 className={`scroll-to-top${showScroll ? ' visible' : ''}`}
                 onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
             >
                 <span className="material-icons">arrow_upward</span>
             </div>
+            <div className="theme-toggle" onClick={() => setIsDark(d => !d)}>
+                <span className="material-icons theme-icon sun-icon">dark_mode</span>
+                <span className="material-icons theme-icon moon-icon">light_mode</span>
+            </div>
+
         </div>
     )
 }
