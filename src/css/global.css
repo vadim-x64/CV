@@ -1,5 +1,5 @@
 * {
-    font-family: "Jura", serif;
+    font-family: "Tektur", sans-serif;
     transition: all 0.5s ease;
 }
 
@@ -289,8 +289,8 @@ body.dark-theme .moon-icon {
 
     .foot {
         bottom: 10px;
-        left: 10px;
-        gap: 10px;
+        right: 10px;
+        gap: 0;
     }
 
     .theme-icon {

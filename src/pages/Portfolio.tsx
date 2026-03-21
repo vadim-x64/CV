@@ -35,10 +35,13 @@ const PROJECTS: Project[] = [
         description:
             'Десктопний застосунок на .NET WPF, який автоматично знаходить дублікати фото та відео на комп\'ютері. Аналізує якість файлів і дозволяє швидко видалити зайві копії, залишаючи найкращі. Ефективний інструмент для звільнення непотрібних медіафайлів та впорядкування медіатеки. Працює тільки під керуванням Windows.',
     },
-    {img: '/images/c2.jpg'},
-    {img: '/images/c5.jpg'},
-    {img: '/images/c3.jpg'},
-    {img: '/images/c4.jpg'},
+]
+
+const CERTIFICATES: string[] = [
+    '/images/c2.jpg',
+    '/images/c5.jpg',
+    '/images/c3.jpg',
+    '/images/c4.jpg',
 ]
 
 const Portfolio = () => {
@@ -83,6 +86,20 @@ const Portfolio = () => {
                                             )}
                                         </div>
                                     )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="certificates">
+                        <h2>Сертифікати</h2>
+                        <div className="certificate-gallery">
+                            {CERTIFICATES.map((src, i) => (
+                                <div
+                                    key={i}
+                                    className="certificate-card"
+                                    onClick={() => setModalSrc(src)}
+                                >
+                                    <img src={src} alt=""/>
                                 </div>
                             ))}
                         </div>
