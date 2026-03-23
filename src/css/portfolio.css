@@ -89,6 +89,8 @@
 
 .project-card {
     position: relative;
+    display: flex;          /* ← додати */
+    flex-direction: column; /* ← додати */
 }
 
 .project-card .image-wrapper {
@@ -110,6 +112,12 @@
     object-position: center;
 }
 
+.project-content {
+    display: flex;          /* ← додати */
+    flex-direction: column; /* ← додати */
+    flex: 1;                /* ← додати */
+}
+
 .project-content h3 {
     font-size: 20px;
     font-weight: bold;
@@ -125,6 +133,8 @@
 
 .project-content a {
     color: #1c1cff;
+    margin-top: auto;       /* ← додати — пушить посилання вниз */
+    display: block;
 }
 
 /* ── Image modal (scoped to avoid conflict with profile) ─── */
