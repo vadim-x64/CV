@@ -9,7 +9,7 @@ body {
     overflow-y: scroll;
     background-image: linear-gradient(to bottom, #eaeff8, #e1e8fa, #e1e8fa, #d4dffa);
     opacity: 0;
-    animation: fadeIn 2s ease-out 0.5s forwards;
+    animation: fadeIn 2s ease-out 0s forwards;
 }
 
 @keyframes fadeIn {
