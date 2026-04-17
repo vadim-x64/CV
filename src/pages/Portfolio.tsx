@@ -20,7 +20,7 @@ const PROJECTS: Project[] = [
         title: 'SmartToDo',
         description:
             'Вебсистема для управління завданнями, яка допомагає організувати особисті та робочі справи в одному місці. Дозволяє створювати завдання, встановлювати терміни виконання, розподіляти їх по категоріях та отримувати нагадування про події. Застосунок написаний на JavaScript і має зручний інтерфейс для швидкого планування щоденних справ.',
-        link: 'https://smarttodo-iver.onrender.com',
+        link: '',
     },
     {
         img: '/images/chatbot.png',
@@ -55,6 +55,9 @@ const CERTIFICATES: string[] = [
     '/images/c5.jpg',
     '/images/c3.jpg',
     '/images/c4.jpg',
+    '/images/c1.jpg',
+    '/images/c6.jpg',
+    '/images/c7.jpg',
 ]
 
 const Portfolio = () => {

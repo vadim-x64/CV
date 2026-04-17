@@ -38,21 +38,37 @@ const Home = () => {
         const ctx = canvas.getContext('2d')!
         let animId: number
 
-        const resize = () => {
-            canvas.width = container.offsetWidth
-            canvas.height = container.offsetHeight
-        }
-
-        resize()
-        window.addEventListener('resize', resize)
-
+        // balls тепер з нульовими координатами — розкидаємо окремо
         const balls: Ball[] = Array.from({length: 2000}, () => ({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
+            x: 0,
+            y: 0,
             r: Math.random() * 2.5 + 1,
             dx: (Math.random() - 0.5) * 1.2,
             dy: (Math.random() - 0.5) * 1.2,
         }))
+
+        const scatter = () => {
+            balls.forEach(b => {
+                b.x = Math.random() * canvas.width
+                b.y = Math.random() * canvas.height
+            })
+        }
+
+        const resize = () => {
+            const hadNoHeight = canvas.height === 0
+            canvas.width = container.offsetWidth
+            canvas.height = container.offsetHeight
+            if (hadNoHeight && canvas.height > 0) scatter() // ← спрацює коли фото завантажиться
+        }
+
+        resize()
+        if (canvas.height > 0) scatter() // ← одразу на десктопі
+
+        window.addEventListener('resize', resize)
+
+        // ResizeObserver стежить за контейнером, а не за вікном
+        const ro = new ResizeObserver(resize)
+        ro.observe(container)
 
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -74,6 +90,7 @@ const Home = () => {
         return () => {
             cancelAnimationFrame(animId)
             window.removeEventListener('resize', resize)
+            ro.disconnect() // ← не забути прибрати observer
         }
     }, [])
 
@@ -191,9 +208,9 @@ const Home = () => {
                                                 <path
                                                     d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/>
                                             </svg>
-                                            <Spoiler> Номер приховано </Spoiler>
+                                            <Spoiler> 067 518 22 22 </Spoiler>
                                         </div>
-                                        <CopyBtn text="Номер приховано"/>
+                                        <CopyBtn text="067 518 22 22"/>
                                     </div>
                                     <div className="contact-row">
                                         <div className="contact-item">
@@ -215,6 +232,11 @@ const Home = () => {
                             <div className="right-button">
                                 <a href="https://github.com/vadim-x64" target="_blank" rel="noreferrer">
                                     GitHub
+                                </a>
+                            </div>
+                            <div className="right-button">
+                                <a href="https://www.linkedin.com/in/%D0%B2%D0%B0%D0%B4%D0%B8%D0%BC-%D0%B2%D0%BE%D0%B9%D1%86%D0%B5%D1%85%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9-623868300/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BDggACzrERfy6nZQkdqhi7w%3D%3D" target="_blank" rel="noreferrer">
+                                    LinkedIn
                                 </a>
                             </div>
                         </div>

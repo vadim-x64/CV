@@ -320,14 +320,18 @@
 
 .social-buttons {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ідеальне центрування по вертикалі та горизонталі */
     display: flex;
-    width: 100%;
-    height: 100px;
+    flex-direction: column; /* У стовпчик */
+    gap: 30px;              /* Відступ між кнопками */
+    width: auto;
+    height: auto;
 }
 
 .right-button {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,7 +339,10 @@
 
 .right-button a {
     background-color: #ffffff;
-    padding: 20px 100px;
+    width: 350px;           /* Фіксована ширина для однакового розміру */
+    padding: 20px 0;        /* Прибираємо бокові відступи, залишаємо лише верх/низ */
+    text-align: center;     /* Текст рівно по центру кнопки */
+    display: inline-block;
     text-decoration: none;
     font-size: 40px;
     font-weight: bold;
@@ -343,6 +350,7 @@
     transition: all 0.3s ease;
     border-radius: 200px;
     box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 1);
+    box-sizing: border-box; /* Щоб паддінги не ламали ширину */
 }
 
 .right-button a:hover {
@@ -529,6 +537,8 @@ body.dark-theme .nav-button:hover {
 
     .right-button a {
         font-size: 24px;
+        width: 250px; /* Менша ширина для телефонів */
+        padding: 15px 0;
     }
 
     .right-button a:hover {
