@@ -1,4 +1,3 @@
-/* ── Layout ──────────────────────────────────────────────── */
 .page-profile main {
     border-bottom: 5px solid #ffffff;
     border-right: 5px solid #ffffff;
@@ -10,7 +9,6 @@
     margin: auto;
 }
 
-/* ── Sections grid ───────────────────────────────────────── */
 .page-profile .about-me,
 .skills,
 .skills-container,
@@ -43,7 +41,6 @@
     margin: 0;
 }
 
-/* ── Download button ─────────────────────────────────────── */
 .download-btn {
     background: none;
     border: none;
@@ -54,7 +51,6 @@
     transition: color 0.3s ease;
 }
 
-/* ── Resume modal (scoped to avoid conflict with portfolio) ─ */
 .page-profile .modal {
     position: fixed;
     z-index: 999;
@@ -130,7 +126,6 @@
     font-size: 18px;
 }
 
-/* ── Education / Experience / Skills ─────────────────────── */
 .skills-container {
     grid-column: span 2;
     margin-bottom: 50px;
@@ -217,7 +212,6 @@ body.dark-theme .other-info p:last-child {
     color: #ffffff;
 }
 
-/* ── Dark Theme — profile ────────────────────────────────── */
 body.dark-theme .page-profile main {
     border-color: #222;
 }
@@ -263,7 +257,6 @@ body.dark-theme .download-btn {
     color: #3d8bff;
 }
 
-/* ── Media Queries — profile ─────────────────────────────── */
 @media screen and (min-width: 769px) and (max-width: 1080px) {
     .container {
         margin: 150px 20px 100px 20px;

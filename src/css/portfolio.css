@@ -1,4 +1,3 @@
-/* ── Layout ──────────────────────────────────────────────── */
 .page-portfolio main {
     border-bottom: 5px solid #ffffff;
     border-right: 5px solid #ffffff;
@@ -10,7 +9,6 @@
     margin: auto;
 }
 
-/* ── GitHub floating button ──────────────────────────────── */
 .git {
     position: absolute;
     top: 200px;
@@ -74,7 +72,6 @@
     }
 }
 
-/* ── Projects ────────────────────────────────────────────── */
 .projects h2 {
     margin: 0 0 40px 0;
     padding-top: 100px;
@@ -89,8 +86,8 @@
 
 .project-card {
     position: relative;
-    display: flex;          /* ← додати */
-    flex-direction: column; /* ← додати */
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card .image-wrapper {
@@ -113,9 +110,9 @@
 }
 
 .project-content {
-    display: flex;          /* ← додати */
-    flex-direction: column; /* ← додати */
-    flex: 1;                /* ← додати */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .project-content h3 {
@@ -133,11 +130,10 @@
 
 .project-content a {
     color: #1c1cff;
-    margin-top: auto;       /* ← додати — пушить посилання вниз */
+    margin-top: auto;
     display: block;
 }
 
-/* ── Image modal (scoped to avoid conflict with profile) ─── */
 .page-portfolio .modal {
     display: none;
     position: fixed;
@@ -161,7 +157,6 @@
     object-fit: contain;
 }
 
-/* ── Certificates ────────────────────────────────────────── */
 .certificates h2 {
     margin: 0 0 40px 0;
     padding-top: 60px;
@@ -185,12 +180,8 @@
     object-fit: cover;
     object-position: center;
     display: block;
-
 }
 
-
-
-/* ── Dark Theme — portfolio ──────────────────────────────── */
 body.dark-theme .page-portfolio main {
     border-color: #222;
 }
@@ -227,7 +218,6 @@ body.dark-theme .git::after {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* ── Media Queries — portfolio ───────────────────────────── */
 @media screen and (min-width: 769px) and (max-width: 1080px) {
     .container {
         margin: 150px 20px 100px 20px;

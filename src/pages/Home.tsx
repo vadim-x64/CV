@@ -2,7 +2,7 @@ import {useEffect, useRef, useState, useCallback} from 'react'
 import Spoiler from '../components/Spoiler'
 
 type Ball = { x: number; y: number; r: number; dx: number; dy: number }
-const SLIDES = ['.NET', 'Java', 'Python', 'HTML/CSS/JS', 'MySQL', 'PostgreSQL']
+const SLIDES = ['ASP.NET', 'Java', 'JavaScript', 'TypeScript', 'Spring Boot', 'Android', 'PostgreSQL', 'Docker', 'Git']
 
 const CopyBtn = ({text}: { text: string }) => {
     const [copied, setCopied] = useState(false)
@@ -38,7 +38,6 @@ const Home = () => {
         const ctx = canvas.getContext('2d')!
         let animId: number
 
-        // balls тепер з нульовими координатами — розкидаємо окремо
         const balls: Ball[] = Array.from({length: 2000}, () => ({
             x: 0,
             y: 0,
@@ -58,15 +57,14 @@ const Home = () => {
             const hadNoHeight = canvas.height === 0
             canvas.width = container.offsetWidth
             canvas.height = container.offsetHeight
-            if (hadNoHeight && canvas.height > 0) scatter() // ← спрацює коли фото завантажиться
+            if (hadNoHeight && canvas.height > 0) scatter()
         }
 
         resize()
-        if (canvas.height > 0) scatter() // ← одразу на десктопі
+        if (canvas.height > 0) scatter()
 
         window.addEventListener('resize', resize)
 
-        // ResizeObserver стежить за контейнером, а не за вікном
         const ro = new ResizeObserver(resize)
         ro.observe(container)
 
@@ -90,7 +88,7 @@ const Home = () => {
         return () => {
             cancelAnimationFrame(animId)
             window.removeEventListener('resize', resize)
-            ro.disconnect() // ← не забути прибрати observer
+            ro.disconnect()
         }
     }, [])
 

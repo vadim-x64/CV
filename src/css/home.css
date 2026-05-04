@@ -1,4 +1,3 @@
-/* ── Content panels ──────────────────────────────────────── */
 .content {
     display: flex;
     align-items: center;
@@ -48,7 +47,6 @@
     opacity: 0;
 }
 
-/* .page-home scoped because .about-me also exists in Profile */
 .page-home .about-me {
     width: 550px;
     height: 700px;
@@ -108,7 +106,6 @@
     text-transform: uppercase;
 }
 
-/* ── Slider section ─────────────────────────────────────── */
 .new-section,
 .photo-section {
     display: flex;
@@ -194,7 +191,6 @@
     position: relative;
 }
 
-/* ── Contacts section ───────────────────────────────────── */
 .photo-container-left {
     width: 100%;
     height: 700px;
@@ -305,7 +301,6 @@
     pointer-events: none;
 }
 
-/* ── GitHub / Portfolio panel ───────────────────────────── */
 .photo-container-right {
     width: 100%;
     height: 700px;
@@ -322,10 +317,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Ідеальне центрування по вертикалі та горизонталі */
+    transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: column; /* У стовпчик */
-    gap: 30px;              /* Відступ між кнопками */
+    flex-direction: column;
+    gap: 30px;
     width: auto;
     height: auto;
 }
@@ -339,9 +334,9 @@
 
 .right-button a {
     background-color: #ffffff;
-    width: 350px;           /* Фіксована ширина для однакового розміру */
-    padding: 20px 0;        /* Прибираємо бокові відступи, залишаємо лише верх/низ */
-    text-align: center;     /* Текст рівно по центру кнопки */
+    width: 350px;
+    padding: 20px 0;
+    text-align: center;
     display: inline-block;
     text-decoration: none;
     font-size: 40px;
@@ -350,14 +345,13 @@
     transition: all 0.3s ease;
     border-radius: 200px;
     box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 1);
-    box-sizing: border-box; /* Щоб паддінги не ламали ширину */
+    box-sizing: border-box;
 }
 
 .right-button a:hover {
     transform: scaleX(1.1);
 }
 
-/* ── Dark Theme — home specific ─────────────────────────── */
 body.dark-theme .left-photo,
 body.dark-theme .page-home .about-me,
 body.dark-theme .right-photo,
@@ -537,7 +531,7 @@ body.dark-theme .nav-button:hover {
 
     .right-button a {
         font-size: 24px;
-        width: 250px; /* Менша ширина для телефонів */
+        width: 250px;
         padding: 15px 0;
     }
 
