@@ -156,17 +156,19 @@ const Profile = () => {
                                         <br/>
                                         4) OOP, REST, MVC
                                         <br/>
-                                        5) Spring Boot/Thymeleaf, Hibernate
+                                        5) Android (Kotlin, Flutter/Dart)
                                         <br/>
-                                        6) WPF/WinForms, Razor Pages
+                                        6) Spring Boot/Thymeleaf, Hibernate
                                         <br/>
-                                        7) PostgreSQL, MySQL, ORM
+                                        7) WPF/WinForms, Razor Pages
                                         <br/>
-                                        8) git, GitLab, GitHub
+                                        8) PostgreSQL, MySQL, ORM
                                         <br/>
-                                        9) Figma, Bootstrap
+                                        9) git, GitLab, GitHub
                                         <br/>
-                                        10) HTML/CSS
+                                        10) Figma, Bootstrap
+                                        <br/>
+                                        11) HTML/CSS
                                     </p>
                                 </div>
                                 <div className="languages">
