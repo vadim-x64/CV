@@ -1,44 +1,30 @@
-.page-profile main {
-    border-bottom: 5px solid #ffffff;
-    border-right: 5px solid #ffffff;
-    border-left: 5px solid #ffffff;
+.page-profile .timeline-content {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 60px 20px;
 }
 
-.container {
-    max-width: 1080px;
-    margin: auto;
+.profile-text {
+    text-align: justify;
+    font-size: 18px;
+    color: #000000;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.page-profile .about-me,
-.skills,
 .skills-container,
-.education,
-.experience,
 .education-grid,
 .experience-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.page-profile .about-me h2,
-.skills h2,
-.education h2,
-.experience h2 {
-    margin: 100px 0 20px 0;
-    grid-column: span 2;
-    font-size: 40px;
-}
-
-.page-profile .about-me p,
-.hard-skills,
-.soft-skills {
-    border-top: 1px solid #000000;
-    padding-top: 20px;
-    text-align: justify;
-    font-size: 18px;
-    color: #000000;
-    margin: 0;
+.skills-container {
+    margin-bottom: 50px;
 }
 
 .download-btn {
@@ -48,6 +34,7 @@
     cursor: pointer;
     font-size: 18px;
     padding: 0;
+    margin-top: 20px;
     transition: color 0.3s ease;
 }
 
@@ -126,18 +113,14 @@
     font-size: 18px;
 }
 
-.skills-container {
-    grid-column: span 2;
-    margin-bottom: 50px;
-}
-
 .skill {
     margin: 0 0 30px 0;
 }
 
 .skill p {
     margin: 0 0 15px 0;
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 1.5;
 }
 
 .languages {
@@ -162,6 +145,8 @@
 .hard-skills,
 .soft-skills {
     text-align: left;
+    border-top: 1px solid #000000;
+    padding-top: 20px;
 }
 
 .edu-item,
@@ -171,7 +156,6 @@
     text-align: justify;
     margin: 0;
 }
-
 
 .edu-item .title,
 .exp-item .title {
@@ -190,12 +174,7 @@
 .edu-item .txt,
 .exp-item .txt {
     font-size: 18px;
-    margin: 30px auto;
-}
-
-.education-grid,
-.experience-grid {
-    grid-column: span 2;
+    margin: 30px auto 0 auto;
 }
 
 .other-info .other-title {
@@ -203,38 +182,31 @@
     margin-bottom: 8px !important;
 }
 
-.other-info p:last-child {
-    font-size: 18px !important;
+.other-info p {
+    font-size: 18px;
     color: #000000;
-}
-
-body.dark-theme .other-info p:last-child {
-    color: #ffffff;
 }
 
 body.dark-theme .page-profile main {
     border-color: #222;
 }
 
-body.dark-theme .page-profile .about-me p,
+body.dark-theme .profile-text,
 body.dark-theme .hard-skills,
 body.dark-theme .soft-skills,
 body.dark-theme .edu-item,
 body.dark-theme .exp-item {
     border-color: #ffffff;
+    color: #ffffff;
 }
 
-body.dark-theme .page-profile .about-me h2,
-body.dark-theme .page-profile .about-me p,
-body.dark-theme .skills h2,
-body.dark-theme .education h2,
-body.dark-theme .experience h2,
 body.dark-theme .skill p,
 body.dark-theme .edu-item .title,
 body.dark-theme .exp-item .title,
 body.dark-theme .edu-item .txt,
 body.dark-theme .exp-item .txt,
-body.dark-theme .language-item {
+body.dark-theme .language-item,
+body.dark-theme .other-info p {
     color: #ffffff;
 }
 
@@ -284,46 +256,33 @@ body.dark-theme .download-btn {
 }
 
 @media screen and (max-width: 768px) {
-    .container {
-        padding: 0 15px;
-        box-sizing: border-box;
+    .page-profile .timeline-content {
+        padding: 60px 0;
     }
 
-    .page-profile .about-me h2,
-    .skills h2,
-    .education h2,
-    .experience h2 {
-        font-size: 28px;
-        grid-column: span 1;
+    .profile-text {
+        padding: 0;
     }
 
-    .page-profile .about-me,
-    .skills,
     .skills-container,
-    .education,
-    .experience,
     .education-grid,
     .experience-grid {
         grid-template-columns: repeat(1, 1fr);
+        padding: 0;
     }
 
     .skill p {
-        font-size: 20px;
-    }
-
-    .soft-skills {
-        margin: 0;
+        font-size: 18px;
     }
 
     .languages {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
     }
 
     .modal-content {
-        margin: 300px auto;
-        width: 80%;
+        margin: 300px 20px;
+        width: auto;
     }
 
     .modal-content h3 {

@@ -2,7 +2,7 @@ import {useEffect, useRef, useState, useCallback} from 'react'
 import Spoiler from '../components/Spoiler'
 
 type Ball = { x: number; y: number; r: number; dx: number; dy: number }
-const SLIDES = ['ASP.NET', 'Java', 'JavaScript', 'TypeScript', 'Spring Boot', 'Android', 'PostgreSQL', 'Docker', 'Git']
+const SLIDES = ['Java', '.NET', 'JavaScript', 'Docker', 'Android', 'SpringBoot', 'Razor', 'PostgreSQL', 'Git']
 
 interface Project {
     img: string
@@ -15,8 +15,7 @@ const PROJECTS: Project[] = [
     {
         img: '/images/restaurant.png',
         title: 'Restaurant',
-        description: 'Можна сказати, що це мій самий перший проєкт веб. ' +
-            'Це простий сайт-візитка онлайн ресторану, написаний на HTML/CSS/JavaScript ' +
+        description: 'Це простий сайт-візитка онлайн ресторану, написаний на HTML/CSS/JavaScript ' +
             'і Bootstrap. Включає в себе такі сторінки як головна (категорії страв), ' +
             'сторінка зі стравами, сторінка деталей страви, кошик, форма замовлення ' +
             'і сторінки типу форума, про ресторан, умови оплати і доставки.',
