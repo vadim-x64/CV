@@ -123,67 +123,6 @@ const Home = () => {
         return () => window.removeEventListener('keydown', handleKey)
     }, [])
 
-    useEffect(() => {
-        const container = leftPhotoRef.current
-        const canvas = canvasRef.current
-        if (!container || !canvas) return
-        const ctx = canvas.getContext('2d')!
-        let animId: number
-
-        const balls: Ball[] = Array.from({length: 2000}, () => ({
-            x: 0,
-            y: 0,
-            r: Math.random() * 2.5 + 1,
-            dx: (Math.random() - 0.5) * 1.2,
-            dy: (Math.random() - 0.5) * 1.2,
-        }))
-
-        const scatter = () => {
-            balls.forEach(b => {
-                b.x = Math.random() * canvas.width
-                b.y = Math.random() * canvas.height
-            })
-        }
-
-        const resize = () => {
-            const hadNoHeight = canvas.height === 0
-            canvas.width = container.offsetWidth
-            canvas.height = container.offsetHeight
-            if (hadNoHeight && canvas.height > 0) scatter()
-        }
-
-        resize()
-        if (canvas.height > 0) scatter()
-
-        window.addEventListener('resize', resize)
-
-        const ro = new ResizeObserver(resize)
-        ro.observe(container)
-
-        const animate = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height)
-            ctx.fillStyle = '#fff'
-            balls.forEach(b => {
-                ctx.beginPath()
-                ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2)
-                ctx.fill()
-                b.x += b.dx
-                b.y += b.dy
-                if (b.x < 0 || b.x > canvas.width) b.dx *= -1
-                if (b.y < 0 || b.y > canvas.height) b.dy *= -1
-            })
-            animId = requestAnimationFrame(animate)
-        }
-
-        animate()
-
-        return () => {
-            cancelAnimationFrame(animId)
-            window.removeEventListener('resize', resize)
-            ro.disconnect()
-        }
-    }, [])
-
     const displaySlides = [SLIDES[SLIDES.length - 1], ...SLIDES, SLIDES[0]]
 
     const goTo = useCallback((idx: number, animated = true) => {
@@ -231,7 +170,6 @@ const Home = () => {
                         <div className="timeline-content">
                             <div className="content">
                                 <div
-                                    ref={leftPhotoRef}
                                     className={`left-photo${revealed ? ' revealed' : ''}`}
                                     onClick={() => setRevealed(r => !r)}
                                 >
@@ -240,7 +178,8 @@ const Home = () => {
                                         alt=""
                                         className={revealed ? '' : 'blurred'}
                                     />
-                                    <canvas ref={canvasRef} className="left-photo-canvas"/>
+                                    {/* Замінили canvas на нашу CSS-наліпку */}
+                                    <div className="watery-sticker photo-sticker" />
                                 </div>
                                 <div className="about-me">
                                     <h2>Інженер <br/> програмного <br/> забезпечення</h2>
