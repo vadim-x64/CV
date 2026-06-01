@@ -40,7 +40,7 @@ const Header = () => {
             <nav className="nav-buttons">
                 <Link to="/" className={nav('/')}>Головна</Link>
                 <Link to="/profile" className={nav('/profile')}>Профіль</Link>
-                <Link to="/portfolio" className={nav('/portfolio')}>Портфоліо</Link>
+                <Link to="/portfolio" className={nav('/portfolio')}>Додатково</Link>
             </nav>
         </header>
     )

@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 
 const CERTIFICATES: string[] = [
+    '/images/c0.jpg',
     '/images/c2.jpg',
     '/images/c5.jpg',
     '/images/c3.jpg',
@@ -23,28 +24,37 @@ const Portfolio = () => {
 
     return (
         <div className="page-portfolio">
-            <main>
+            <main className="timeline-main">
                 <div className="git">
                     <a href="https://github.com/vadim-x64" target="_blank" rel="noreferrer">
                         <img src="/images/github.png" alt="GitHub"/>
                     </a>
                 </div>
-                <div className="container">
-                    <div className="certificates">
-                        <h2>Сертифікати</h2>
-                        <div className="certificate-gallery">
-                            {CERTIFICATES.map((src, i) => (
-                                <div
-                                    key={i}
-                                    className="certificate-card"
-                                    onClick={() => setModalSrc(src)}
-                                >
-                                    <img src={src} alt=""/>
-                                </div>
-                            ))}
+
+                <div className="timeline-container">
+                    <div className="timeline-line"></div>
+                    {}
+                    <div className="timeline-section">
+                        <div className="timeline-dot"></div>
+                        <div className="timeline-content">
+                            <h2 className="section-title">Сертифікати</h2>
+                            <p className="section-subtitle">Документи про проходження курсів</p>
+
+                            <div className="certificate-gallery">
+                                {CERTIFICATES.map((src, i) => (
+                                    <div
+                                        key={i}
+                                        className="certificate-card"
+                                        onClick={() => setModalSrc(src)}
+                                    >
+                                        <img src={src} alt=""/>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div
                     className={`modal${modalSrc ? ' active' : ''}`}
                     onClick={() => setModalSrc(null)}
