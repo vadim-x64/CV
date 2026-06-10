@@ -114,7 +114,6 @@
     transition: border-color 0.3s ease;
 }
 
-/* Dark Theme Adjustments */
 body.dark-theme .git::after {
     border-color: rgba(255, 255, 255, 0.5);
 }
@@ -123,7 +122,6 @@ body.dark-theme .certificate-card img {
     border-color: #222;
 }
 
-/* Адаптивність */
 @media screen and (min-width: 769px) and (max-width: 1080px) {
     .git {
         top: 230px;
@@ -136,21 +134,19 @@ body.dark-theme .certificate-card img {
 
 @media screen and (max-width: 768px) {
     .git {
-        top: 250px;
+        top: 300px;
         right: 20px;
-        width: 60px;
-        height: 60px;
-    }
-
-    .git img {
         width: 50px;
         height: 50px;
     }
 
+    .git img {
+        width: 40px;
+        height: 40px;
+    }
+
     .certificate-gallery {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 0 10px 50px 10px;
     }
 
     .certificate-card img {

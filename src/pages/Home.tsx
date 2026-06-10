@@ -178,7 +178,7 @@ const Home = () => {
                                         alt=""
                                         className={revealed ? '' : 'blurred'}
                                     />
-                                    {/* Замінили canvas на нашу CSS-наліпку */}
+                                    {}
                                     <div className="watery-sticker photo-sticker" />
                                 </div>
                                 <div className="about-me">

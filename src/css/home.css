@@ -476,7 +476,6 @@
     }
 }
 
-/* Анімація переливання градієнту (відблиск) */
 @keyframes glassShimmer {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -489,7 +488,6 @@
     left: -15px;
     right: -15px;
     bottom: -8px;
-    /* Оновлений градієнт для кращого відблиску */
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.4) 100%);
     background-size: 200% 200%;
     backdrop-filter: blur(8px);
@@ -502,8 +500,6 @@
     z-index: 1;
     transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     pointer-events: none;
-
-    /* Запуск безкінечних анімацій */
     animation: morphDrop 4s ease-in-out infinite, glassShimmer 3s ease-in-out infinite;
 }
 
