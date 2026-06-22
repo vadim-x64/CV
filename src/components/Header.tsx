@@ -38,6 +38,10 @@ const Header = () => {
                 <Link to="/">Вадим Войцеховський</Link>
             </div>
             <nav className="nav-buttons">
+                {}
+                <div className="internship-badge">
+                    Шукаю стажування
+                </div>
                 <Link to="/" className={nav('/')}>Головна</Link>
                 <Link to="/profile" className={nav('/profile')}>Профіль</Link>
                 <Link to="/portfolio" className={nav('/portfolio')}>Додатково</Link>

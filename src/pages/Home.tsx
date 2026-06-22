@@ -2,7 +2,7 @@ import {useEffect, useRef, useState, useCallback} from 'react'
 import Spoiler from '../components/Spoiler'
 
 type Ball = { x: number; y: number; r: number; dx: number; dy: number }
-const SLIDES = ['Java', '.NET', 'JavaScript', 'Docker', 'Android', 'SpringBoot', 'Razor', 'PostgreSQL', 'Git']
+const SLIDES = ['Java', '.NET', 'JavaScript', 'Kotlin', 'Dart', 'Python', 'C++', 'Docker', 'PostgreSQL', 'git']
 
 interface Project {
     img: string

@@ -3,6 +3,65 @@
     transition: all 0.5s ease;
 }
 
+/* ===== global.css ===== */
+
+.nav-buttons {
+    display: flex;
+    flex: 1; /* Розтягуємо контейнер меню на весь вільний простір справа */
+    align-items: center;
+}
+
+.internship-badge {
+    background-color: #2E7D32;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 50px; /* Робимо відступ від білої лінії */
+    margin-right: auto; /* Ця властивість відштовхне всі посилання максимально вправо */
+    cursor: default;
+    user-select: none;
+    white-space: nowrap;
+}
+
+body.dark-theme .internship-badge {
+    background-color: #c8ff00;
+    color: #000000;
+}
+
+/* Онови медіа-запити для адаптивності, щоб на телефонах не зламалось */
+
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+    .nav-buttons {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 5px;
+    }
+
+    .internship-badge {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+    }
+
+    .internship-badge {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
