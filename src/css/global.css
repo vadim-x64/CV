@@ -3,11 +3,9 @@
     transition: all 0.5s ease;
 }
 
-/* ===== global.css ===== */
-
 .nav-buttons {
     display: flex;
-    flex: 1; /* Розтягуємо контейнер меню на весь вільний простір справа */
+    flex: 1;
     align-items: center;
 }
 
@@ -19,8 +17,8 @@
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-left: 50px; /* Робимо відступ від білої лінії */
-    margin-right: auto; /* Ця властивість відштовхне всі посилання максимально вправо */
+    margin-left: 50px;
+    margin-right: auto;
     cursor: default;
     user-select: none;
     white-space: nowrap;
@@ -30,8 +28,6 @@ body.dark-theme .internship-badge {
     background-color: #c8ff00;
     color: #000000;
 }
-
-/* Онови медіа-запити для адаптивності, щоб на телефонах не зламалось */
 
 @media screen and (min-width: 769px) and (max-width: 1080px) {
     .nav-buttons {
@@ -243,7 +239,7 @@ header {
     right: 4px;
     border-radius: 200px !important;
     border: none;
-    animation: morphDrop 4s ease-in-out infinite, glassShimmer 3s ease-in-out infinite !important;
+    animation: morphDrop 4s linear infinite, glassShimmer 3s linear infinite !important;
 }
 
 body.dark-theme {

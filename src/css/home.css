@@ -386,7 +386,7 @@
 .contact-info-blocks {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .info-block {
@@ -395,12 +395,28 @@
     gap: 15px;
     font-size: 24px;
     color: #000000;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .info-block svg {
     width: 30px;
     height: 30px;
     fill: currentColor;
+}
+
+.icons-combined {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.icons-combined svg {
+    width: 30px;
+    height: 30px;
 }
 
 .info-block .copy-btn {
@@ -411,6 +427,7 @@
     transition: opacity 0.2s ease;
     flex-shrink: 0;
     user-select: none;
+    margin-left: auto;
 }
 
 .info-block .copy-btn:hover {
@@ -477,9 +494,15 @@
 }
 
 @keyframes glassShimmer {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .watery-sticker {
@@ -493,14 +516,13 @@
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 2px solid rgba(255, 255, 255, 0.7);
-    box-shadow:
-            0 8px 20px rgba(0, 0, 0, 0.1),
-            inset 0 4px 8px rgba(255, 255, 255, 0.9),
-            inset 0 -4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+    inset 0 4px 8px rgba(255, 255, 255, 0.9),
+    inset 0 -4px 6px rgba(0, 0, 0, 0.05);
     z-index: 1;
     transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     pointer-events: none;
-    animation: morphDrop 4s ease-in-out infinite, glassShimmer 3s ease-in-out infinite;
+    animation: morphDrop 4s linear infinite, glassShimmer 3s linear infinite;
 }
 
 .spoiler.active .watery-sticker {
@@ -619,6 +641,8 @@ body.dark-theme .carousel-btn:hover {
 }
 
 body.dark-theme .info-block {
+    background: rgba(40, 41, 42, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: #ffffff;
 }
 
@@ -634,10 +658,9 @@ body.dark-theme .watery-sticker {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.1) 100%);
     background-size: 200% 200%;
     border-color: rgba(255, 255, 255, 0.2);
-    box-shadow:
-            0 8px 20px rgba(0, 0, 0, 0.4),
-            inset 0 4px 8px rgba(255, 255, 255, 0.2),
-            inset 0 -4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
+    inset 0 4px 8px rgba(255, 255, 255, 0.2),
+    inset 0 -4px 6px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (min-width: 1081px) and (max-width: 1200px) {
@@ -790,6 +813,11 @@ body.dark-theme .watery-sticker {
     }
 
     .info-block svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .icons-combined svg {
         width: 20px;
         height: 20px;
     }
