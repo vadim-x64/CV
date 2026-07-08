@@ -178,7 +178,7 @@
 .project-card-back p a {
     display: inline;
     margin-top: 0;
-    text-decoration: underline; /* Опціонально: щоб краще виділити посилання */
+    text-decoration: underline;
 }
 
 .project-card-inner {

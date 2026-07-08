@@ -31,7 +31,6 @@ const Footer = () => {
                 <span className="material-icons theme-icon sun-icon">dark_mode</span>
                 <span className="material-icons theme-icon moon-icon">light_mode</span>
             </div>
-
         </div>
     )
 }

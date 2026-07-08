@@ -13,7 +13,7 @@ const Spoiler = ({children}: Props) => {
             onClick={() => setActive(a => !a)}
         >
             <span className="spoiler-text">{children}</span>
-            <div className="watery-sticker" />
+            <div className="watery-sticker"/>
         </div>
     )
 }

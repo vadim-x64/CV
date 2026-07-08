@@ -1,7 +1,4 @@
-// ===== Home.tsx =====
-
 import {useEffect, useRef, useState, useCallback} from 'react'
-import Spoiler from '../components/Spoiler'
 
 type Ball = { x: number; y: number; r: number; dx: number; dy: number }
 const SLIDES = ['Java', '.NET', 'JavaScript', 'Kotlin', 'Dart', 'Python', 'C++', 'Docker', 'PostgreSQL', 'git']
@@ -189,7 +186,6 @@ const Home = () => {
             <main className="timeline-main">
                 <div className="timeline-container">
                     <div className="timeline-line"></div>
-
                     <div className="timeline-section">
                         <div className="timeline-dot"></div>
                         <div className="timeline-content">
@@ -216,7 +212,6 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-
                     <div className="timeline-section">
                         <div className="timeline-dot"></div>
                         <div className="timeline-content">
@@ -257,7 +252,6 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-
                     <div className="timeline-section">
                         <div className="timeline-dot"></div>
                         <div className="timeline-content">
@@ -282,7 +276,6 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-
                     <div className="timeline-section">
                         <div className="timeline-dot"></div>
                         <div className="timeline-content">
@@ -290,7 +283,6 @@ const Home = () => {
                             <p className="section-subtitle">Я на зв'язку</p>
                             <div className="home-footer-section">
                                 <div className="contact-info-blocks">
-                                    {}
                                     <div className="info-block">
                                         <div className="icons-combined">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -302,7 +294,6 @@ const Home = () => {
                                         <span>@vadymvoitsekhovskyi</span>
                                         <CopyBtn text="@vadymvoitsekhovskyi"/>
                                     </div>
-                                    {}
                                     <div className="info-block">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -318,7 +309,6 @@ const Home = () => {
                                         <span>@vadymvoitsekhovskyi</span>
                                         <CopyBtn text="@vadymvoitsekhovskyi"/>
                                     </div>
-                                    {}
                                     <div className="info-block">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
                                              fill="currentColor" style={{color: '#4CAF50'}}>
@@ -328,7 +318,6 @@ const Home = () => {
                                         <span>067 518 22 22</span>
                                         <CopyBtn text="067 518 22 22"/>
                                     </div>
-                                    {}
                                     <div className="info-block">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                              style={{color: '#EA4335'}}>
@@ -338,7 +327,6 @@ const Home = () => {
                                         <span>vadim.rolex.2005@gmail.com</span>
                                         <CopyBtn text="vadim.rolex.2005@gmail.com"/>
                                     </div>
-
                                 </div>
                                 <div className="social-links-blocks">
                                     <a href="https://github.com/vadim-x64" target="_blank" rel="noreferrer"

@@ -27,19 +27,16 @@ const Portfolio = () => {
             <main className="timeline-main">
                 <div className="git">
                     <a href="https://github.com/vadim-x64" target="_blank" rel="noreferrer">
-                        <img src="/images/github.png" alt="GitHub"/>
+                        <img src="/images/github.png" alt=""/>
                     </a>
                 </div>
-
                 <div className="timeline-container">
                     <div className="timeline-line"></div>
-                    {}
                     <div className="timeline-section">
                         <div className="timeline-dot"></div>
                         <div className="timeline-content">
                             <h2 className="section-title">Сертифікати</h2>
                             <p className="section-subtitle">Документи про проходження курсів</p>
-
                             <div className="certificate-gallery">
                                 {CERTIFICATES.map((src, i) => (
                                     <div
@@ -54,7 +51,6 @@ const Portfolio = () => {
                         </div>
                     </div>
                 </div>
-
                 <div
                     className={`modal${modalSrc ? ' active' : ''}`}
                     onClick={() => setModalSrc(null)}
